@@ -1,8 +1,12 @@
-# React + Vite
+# Mastermind Website 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Alt text](/relative/path/to/\"Mastermind Website"\.png?raw=true "Optional Title")
 
-Currently, two official plugins are available:
+## Description 
+The mastermind website is about an engaging comprehensive online coaching program that is design to help individuals achieve their goals and dreams. The site offers individuals the chance to sign up for a membership to access different online resources and avail of the online coaching and group classe. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents 
+
+### Demo 
+Here is a live demo of the project https://elaborate-duckanoo-adcefd.netlify.app
+
