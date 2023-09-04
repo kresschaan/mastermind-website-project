@@ -6,9 +6,12 @@ export default {
             colors: {
                 "primary-3": "rgb(var(--primary-3))",
                 "primary-4": "rgb(var(--primary-4) / .45)",
+                "secondary-1": "rgb(var(--secondary-1))",
+                "background-1": "rgb(var(--background-1))",
             },
             fontFamily: {
                 serif: ["ui-serif", "Georgia"],
+                avenir: ["sans-serif", "Avenir"],
             },
         },
     },
