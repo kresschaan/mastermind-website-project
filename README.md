@@ -10,3 +10,8 @@ The mastermind website is about an engaging comprehensive online coaching progra
 ### Demo 
 Here is a live demo of the project https://elaborate-duckanoo-adcefd.netlify.app
 
+### Features 
+
+### Getting Started
+
+### Prequisites
