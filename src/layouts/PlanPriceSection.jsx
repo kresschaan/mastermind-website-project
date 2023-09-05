@@ -1,13 +1,13 @@
 function PlanPriceSection() {
     return (
-        <div className="flex font-avenir flex-col justify-center  text-center w-screen mt-32 py-32 bg-background-1">
+        <div className="flex font-avenir flex-col justify-center text-center py-20 bg-background-1">
             <h1 className="text-4xl pb-2">Best Pricing Plan for You</h1>
             <h2 className="text-2xl font-light">
                 Pricing plans for every budget
             </h2>
 
-            <div className="flex w-full h-[40rem] p-20">
-                <div className="w-full h-full">
+            <div className="flex flex-col w-full p-20 lg:flex-row">
+                <div className="w-full h-full p-10 lg:p-0">
                     <h4 className="pr-10 mb-5 text-xl">Choose plan</h4>
 
                     <div className="flex flex-row justify-center mb-2">
@@ -63,7 +63,7 @@ function PlanPriceSection() {
                         </button>
                     </div>
                 </div>
-                <div className="bg-secondary-1 text-white border border-black border-opacity-10 rounded-lg w-full h-full ml-2 scale-110">
+                <div className="bg-secondary-1 text-white border border-black border-opacity-10 rounded-lg w-full ml-2 scale-110">
                     <h3 className="pt-10 text-xl">Elite</h3>
                     <h3>For dedicated individuals</h3>
 
@@ -81,7 +81,7 @@ function PlanPriceSection() {
                         <p className="pb-4">Private Individual Sessions</p>
                         <p className="pb-4">Weekly Trainings</p>
 
-                        <div className="pt-4 justify-center">
+                        <div className="pb-4 justify-center">
                             <button class="rounded-[14px] border-2 w-10/12 h-12">
                                 Select Plan
                             </button>

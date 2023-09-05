@@ -12,6 +12,7 @@ export default {
             fontFamily: {
                 serif: ["ui-serif", "Georgia"],
                 avenir: ["sans-serif", "Avenir"],
+                "avenir-heavy": ["sans", "Avenir Heavy"],
             },
         },
     },

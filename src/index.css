@@ -33,6 +33,11 @@
     src: url("/src/assets/fonts/Avenir Regular.ttf");
 }
 
+@font-face {
+    font-family: "Avenir-Heavy";
+    src: url("/src/assets/fonts/Avenir Heavy.ttf");
+}
+
 /*
 a {
     font-weight: 500;
