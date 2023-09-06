@@ -5,7 +5,11 @@ function NavBar() {
     return (
         <div className="flex justify-between bg-primary-4/40 fixed z-10 top-0 w-screen">
             <div className="flex bg-white-100">
-                <img className="h-24 w-24" src={navlogo} alt="" />
+                <img
+                    className="h-16 w-16 md:h-24 md:w-24"
+                    src={navlogo}
+                    alt=""
+                />
             </div>
             <NavBarItems></NavBarItems>
         </div>

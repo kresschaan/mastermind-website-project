@@ -39,6 +39,13 @@
 }
 
 /*
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}
+
+
 a {
     font-weight: 500;
     color: #646cff;

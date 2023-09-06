@@ -2,7 +2,7 @@ import discoverImg from "../assets/images/mastermind-who-section.jpg";
 
 function DiscoverSection() {
     return (
-        <div className="flex flex-col justify-evenly text-primary-3 m-20 pb-24 lg:flex-row">
+        <div className="flex flex-col justify-evenly text-primary-3 mx-10 lg:mx-20 pb-24 lg:flex-row">
             <div className="flex max-w-lg flex-col justify-center text-center">
                 <h1 className="pb-2 font-serif text-4xl">
                     Discovering the Mastermind

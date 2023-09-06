@@ -2,9 +2,9 @@ import aboutImg from "../assets/images/masterclass-about-section.jpg";
 
 function AboutSection() {
     return (
-        <div className="flex flex-col relative mx-auto my-32 max-w-6xl text-primary-3 lg:translate-x-[-5rem]">
+        <div className="flex flex-col relative mx-auto mt-20 max-w-6xl text-primary-3 lg:translate-x-[-5rem]">
             <img className="" src={aboutImg} alt="" />
-            <div className="flex flex-col text-center md:absolute max-w-2xl h-[25rem] z-10 bg-white p-10 lg:translate-x-[40rem] lg:translate-y-[20rem]">
+            <div className="flex flex-col text-center md:absolute max-w-2xl z-10 bg-white p-10 lg:translate-x-[40rem] lg:translate-y-[20rem]">
                 <h1 className="font-serif text-4xl pb-2">
                     What is the Mastermind?
                 </h1>
