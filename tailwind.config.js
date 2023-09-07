@@ -6,6 +6,7 @@ export default {
             colors: {
                 "primary-3": "rgb(var(--primary-3))",
                 "primary-4": "rgb(var(--primary-4) / .45)",
+                "primary-5": "rgb(var(--primary-5))",
                 "secondary-1": "rgb(var(--secondary-1))",
                 "background-1": "rgb(var(--background-1))",
             },

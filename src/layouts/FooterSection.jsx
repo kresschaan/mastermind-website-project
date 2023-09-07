@@ -13,7 +13,7 @@ function FooterSection() {
             </div>
 
             <div className="flex flex-col lg:flex-row lg:mx-5 mb-6">
-                <div className="flex flex-col w-1/4">
+                <div className="flex flex-col w-3/4 md:w-1/4">
                     <div className="flex mx-8 mt-5 mb-2 w-3/5 h-3/4">
                         <div className="flex flex-row items-center">
                             <img
