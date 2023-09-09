@@ -1,5 +1,5 @@
 import loginImg from "../assets/images/login.jpg";
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
 
 function Login() {
     return (

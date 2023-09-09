@@ -1,21 +1,27 @@
-import NavBar from "./layouts/NavBar";
-import MainSection from "./layouts/MainSection";
-import AboutSection from "./layouts/AboutSection";
-import FeatureSection from "./layouts/FeatureSection";
-import DiscoverSection from "./layouts/DiscoverSection";
-import PlanPriceSection from "./layouts/PlanPriceSection";
-import FooterSection from "./layouts/FooterSection";
+import NavBar from "./components/NavBar";
+import Home from "./layouts/Home";
+import About from "./layouts/About";
+import Feature from "./layouts/Feature";
+import Discover from "./layouts/Discover";
+import PlanPrice from "./layouts/PlanPrice";
+import Footer from "./layouts/Footer";
+import useScroll from "./hooks/useScroll.jsx";
+import { useState, useEffect } from "react";
 
-function App() {
+function App({ focusOn }) {
+    useEffect(() => {
+        useScroll(focusOn);
+    }, []);
+
     return (
         <>
-            <NavBar></NavBar>
-            <MainSection></MainSection>
-            <AboutSection></AboutSection>
-            <FeatureSection></FeatureSection>
-            <DiscoverSection></DiscoverSection>
-            <PlanPriceSection></PlanPriceSection>
-            <FooterSection></FooterSection>
+            <NavBar isLink={false}></NavBar>
+            <Home></Home>
+            <About></About>
+            <Feature></Feature>
+            <Discover></Discover>
+            <PlanPrice></PlanPrice>
+            <Footer></Footer>
         </>
     );
 }
