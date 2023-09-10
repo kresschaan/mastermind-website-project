@@ -8,6 +8,7 @@ import Login from "./layouts/Login.jsx";
 import Success from "./layouts/Success.jsx";
 import Checkout from "./layouts/Checkout.jsx";
 import Home from "./layouts/Home";
+import Dashboard from "./layouts/Dashboard";
 import "./store/auth/authSlice";
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
     {
         path: "/login",
         element: <Login />,
+    },
+    {
+        path: "/dashboard",
+        element: <Dashboard />,
     },
     {
         path: "/success",
