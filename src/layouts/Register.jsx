@@ -1,5 +1,6 @@
 import registerImg from "../assets/images/register.jpg";
 import NavBar from "../components/NavBar";
+import Form from "../components/Form";
 
 function Register() {
     return (
@@ -24,60 +25,7 @@ function Register() {
                 </div>
 
                 <div className="flex flex-col flex-1 justify-center items-center ">
-                    <form className="w-2/4 " action="">
-                        <div className="flex flex-col mb-6">
-                            <label
-                                className="font-serif mb-2 text-primary-5 text-sm"
-                                htmlFor=""
-                            >
-                                USERNAME
-                            </label>
-                            <input className="border-b-2" type="text"></input>
-                        </div>
-
-                        <div className="flex flex-col mb-6">
-                            <label
-                                className="font-serif mb-2 text-primary-5 text-sm"
-                                htmlFor=""
-                            >
-                                PASSWORD
-                            </label>
-                            <input className="border-b-2" type="text"></input>
-                        </div>
-
-                        <div className="flex flex-col mb-6">
-                            <label
-                                className="font-serif mb-2 text-primary-5 text-sm"
-                                htmlFor=""
-                            >
-                                FULL NAME
-                            </label>
-                            <input className="border-b-2" type="text"></input>
-                        </div>
-
-                        <div className="flex flex-col mb-32">
-                            <label
-                                className="font-serif mb-2 text-primary-5 text-sm"
-                                htmlFor=""
-                            >
-                                EMAIL
-                            </label>
-                            <input className="border-b-2" type="text"></input>
-                        </div>
-
-                        <div className="flex flex-col">
-                            <button className="bg-secondary-1 text-white rounded-[8px] border-2 h-12 px-16 mb-6">
-                                Get Started
-                            </button>
-
-                            <div className="flex flex-row justify-center text-center">
-                                <p className="font-light pr-1">
-                                    Already have an account?
-                                </p>
-                                <p>Sign in</p>
-                            </div>
-                        </div>
-                    </form>
+                    <Form></Form>
                 </div>
             </div>
         </>

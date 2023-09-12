@@ -114,7 +114,7 @@ function Dashboard() {
                         <div className="max-h-[500px] overflow-auto">
                             <div className="border mb-2 p-4">
                                 <div className="flex flex-row">
-                                    <div class="rounded-full bg-slate-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="rounded-full bg-slate-500 mt-1 mr-2 h-4 w-4"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
 
@@ -124,7 +124,7 @@ function Dashboard() {
                             </div>
                             <div className="border mb-2 p-4">
                                 <div className="flex flex-row">
-                                    <div class="rounded-full bg-slate-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="rounded-full bg-slate-500 mt-1 mr-2 h-4 w-4"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
@@ -133,7 +133,7 @@ function Dashboard() {
                             </div>
                             <div className="border mb-2 p-4">
                                 <div className="flex flex-row">
-                                    <div class="rounded-full bg-orange-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="rounded-full bg-orange-500 mt-1 mr-2 h-4 w-4"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
@@ -142,7 +142,7 @@ function Dashboard() {
                             </div>
                             <div className="border mb-2 p-4">
                                 <div className="flex flex-row">
-                                    <div class="rounded-full bg-sky-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="rounded-full bg-sky-500 mt-1 mr-2 h-4 w-4"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
@@ -151,7 +151,7 @@ function Dashboard() {
                             </div>
                             <div className="border mb-2 p-4">
                                 <div className="flex flex-row">
-                                    <div class="rounded-full bg-emerald-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="rounded-full bg-emerald-500 mt-1 mr-2 h-4 w-4"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
@@ -160,7 +160,7 @@ function Dashboard() {
                             </div>
                             <div className="border mb-2 p-4">
                                 <div className="flex flex-row">
-                                    <div class="rounded-full bg-emerald-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="rounded-full bg-emerald-500 mt-1 mr-2 h-4 w-4"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
@@ -172,7 +172,7 @@ function Dashboard() {
                     <div className="flex flex-col w-2/4 max-h-[500px] p-4 mx-2 border rounded-lg overflow-auto">
                         <h4 className="border-b mb-4">Learning Summary</h4>
                         <h5>Entrepreneurship and Business Coaching</h5>
-                        <ul class="list-disc p-4">
+                        <ul className="list-disc p-4">
                             <li className="mb-6">
                                 Self-awareness: Leadership development starts
                                 with self-awareness. Learn to recognize their
