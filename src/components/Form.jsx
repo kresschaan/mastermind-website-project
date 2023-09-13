@@ -1,25 +1,26 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addUser } from "../store/index";
+// import { addUser } from "../store/index";
+import { useFetchUsersQuery, useAddUserMutation } from "../store/index";
 
 function Form() {
     const dispatch = useDispatch();
+    const { data, error, isLoading } = useFetchUsersQuery(1);
+    const [addUser, results] = useAddUserMutation();
 
     const listUsers = useSelector((state) => {
-        console.log(state);
+        // console.log(state);
         return state.users;
     });
 
-    const onSubmit = (event) => {
+    const handleAddUser = (event) => {
         event.preventDefault();
 
-        dispatch(
-            addUser({
-                username: event.target.form[0].value,
-                password: event.target.form[1].value,
-                fullName: event.target.form[2].value,
-                email: event.target.form[3].value,
-            })
-        );
+        addUser({
+            username: event.target.form[0].value,
+            password: event.target.form[1].value,
+            fullName: event.target.form[2].value,
+            email: event.target.form[3].value,
+        });
     };
 
     return (
@@ -67,7 +68,7 @@ function Form() {
             <div className="flex flex-col">
                 <button
                     className="bg-secondary-1 text-white rounded-[8px] border-2 h-12 px-16 mb-6"
-                    onClick={(e) => onSubmit(e)}
+                    onClick={(e) => handleAddUser(e)}
                 >
                     Get Started
                 </button>

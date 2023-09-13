@@ -1,5 +1,20 @@
 {
-    "users": [],
-    "menu": [],
-    "classes": []
+  "users": [
+    {
+      "id": 1,
+      "username": "Chris12",
+      "password": "test",
+      "fullName": "Christian Wayne",
+      "email": "christian@gmail.com"
+    },
+    {
+      "username": "qwe",
+      "password": "qwe",
+      "fullName": "qwe",
+      "email": "qweqwe",
+      "id": 2
+    }
+  ],
+  "menu": [],
+  "classes": []
 }

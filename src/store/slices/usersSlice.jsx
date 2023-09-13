@@ -2,7 +2,9 @@ import { configureStore, createSlice, nanoid } from "@reduxjs/toolkit";
 
 const usersSlice = createSlice({
     name: "users",
-    initialState: [],
+    initialState: {
+        data: [],
+    },
     reducers: {
         addUser: (state, action) => {
             // const { username, password, fullName, email } = action.payload;
@@ -10,7 +12,7 @@ const usersSlice = createSlice({
             // state.password = password;
             // state.fullName = fullName;
             // state.email = email;
-            console.log(state);
+            //console.log(state);
 
             // state.push(action.payload);
 
