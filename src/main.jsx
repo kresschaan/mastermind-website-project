@@ -10,8 +10,10 @@ import Success from "./layouts/Success.jsx";
 import Checkout from "./layouts/Checkout.jsx";
 import Home from "./layouts/Home";
 import Dashboard from "./layouts/Dashboard";
-// import { storeAuth } from "./store/auth/authSlice";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import { store } from "./store/index";
+
+const isAuthenticated = localStorage.getItem("userToken");
 
 const router = createBrowserRouter([
     {
@@ -40,15 +42,33 @@ const router = createBrowserRouter([
     },
     {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: (
+            <ProtectedRoute
+                path="/dashboard"
+                type="auth"
+                isAuthenticated={isAuthenticated}
+            ></ProtectedRoute>
+        ),
     },
     {
         path: "/success",
-        element: <Success />,
+        element: (
+            <ProtectedRoute
+                path="/success"
+                type="success"
+                isAuthenticated={isAuthenticated}
+            ></ProtectedRoute>
+        ),
     },
     {
         path: "/checkout",
-        element: <Checkout />,
+        element: (
+            <ProtectedRoute
+                path="/checkout"
+                type="checkout"
+                isAuthenticated={isAuthenticated}
+            ></ProtectedRoute>
+        ),
     },
 ]);
 

@@ -10,6 +10,20 @@
         --background-1: 243 245 247;
         --secondary-1: 53 56 57;
     }
+
+    input {
+        @apply focus:outline-none;
+    }
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url("/src/assets/fonts/Avenir Regular.ttf");
+}
+
+@font-face {
+    font-family: "Avenir-Heavy";
+    src: url("/src/assets/fonts/Avenir Heavy.ttf");
 }
 
 .main-background-img {
@@ -29,14 +43,149 @@
     height: 100%;
 }
 
-@font-face {
-    font-family: "Avenir";
-    src: url("/src/assets/fonts/Avenir Regular.ttf");
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
 }
 
-@font-face {
-    font-family: "Avenir-Heavy";
-    src: url("/src/assets/fonts/Avenir Heavy.ttf");
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.home-container {
+    @apply pb-[150px] flex flex-col items-center justify-center text-white h-screen;
+}
+
+.home-item {
+    @apply mb-4 font-serif font-bold z-10 italic;
+}
+
+.about-container {
+    @apply flex flex-col text-center z-10 bg-white p-10 xl:absolute xl:max-w-2xl xl:translate-x-[40rem] xl:translate-y-[20rem];
+}
+
+.about-item {
+    @apply pb-5 text-justify font-serif;
+}
+
+.discover-container {
+    @apply flex flex-col justify-center text-center lg:pr-10;
+}
+
+.discover-item {
+    @apply pb-10 font-serif text-justify;
+}
+
+.plans-price-container {
+    @apply flex flex-col w-full p-5 lg:p-20 lg:flex-row;
+}
+
+.plan-container {
+    @apply w-full h-full py-5 mb-5 lg:p-10 lg:mb-5;
+}
+
+.plan-item {
+    @apply flex flex-row justify-center;
+}
+
+.pricing-card-standard {
+    @apply flex flex-col justify-evenly bg-white border-t border-l border-b border-black border-opacity-10 mb-5 lg:mb-0 w-full h-full;
+}
+
+.pricing-card-premium {
+    @apply bg-secondary-1 text-white border border-black border-opacity-10 rounded-lg mb-5 lg:mb-0 w-full lg:ml-2 lg:scale-110;
+}
+
+.pricing-header {
+    @apply pt-10 text-xl;
+}
+
+.pricing-amount {
+    @apply flex my-5 pr-2 flex-row justify-center;
+}
+
+.pricing-line {
+    @apply w-3/4 mx-auto py-2 items-center;
+}
+
+.pricing-button {
+    @apply rounded-[14px] border-2 w-10/12 h-12;
+}
+
+.footer-feature {
+    @apply flex flex-col justify-center items-center text-center;
+}
+
+.footer-title {
+    @apply absolute font-serif text-2xl md:text-5xl text-white mt-10 ml-12 lg:mt-32 lg:ml-10;
+}
+
+.footer-nav-item {
+    @apply border-black border-l-[3px] mb-4;
+}
+
+.footer-social-icon {
+    @apply h-8 w-8;
+}
+
+.form-login-label {
+    @apply font-serif mb-2 font-bold md:font-normal md:text-primary-5 text-sm;
+}
+
+.form-login-input {
+    @apply bg-inherit border-black p-4 md:border-slate-200;
+}
+
+.form-login-input .valid {
+    @apply border-b-2;
+}
+
+.form-login-input .error {
+    @apply border-red-400 border-b;
+}
+
+.form-login-error {
+    @apply text-sm mt-2 text-gray-400;
+}
+
+.login-section {
+    @apply flex flex-col md:flex-row h-screen;
+}
+
+.login-form {
+    @apply flex flex-col flex-1 justify-center items-center absolute md:relative w-full h-screen;
+}
+
+.login-title {
+    @apply font-bold z-10 mb-36 mt-20 text-5xl tracking-wide md:text-4xl md:text-black lg:text-4xl;
+}
+
+.login-button {
+    @apply bg-secondary-1 text-white rounded-[8px] lg:border-2 h-12 px-16 mb-32;
+}
+
+.forgot-password {
+    @apply flex flex-row justify-center text-center font-bold md:font-normal md:text-black;
+}
+
+.form-label {
+    @apply font-serif mb-4 text-primary-5 text-sm;
+}
+
+.form-error {
+    @apply text-sm mt-2 text-gray-400;
+}
+
+.form-button {
+    @apply bg-secondary-1 text-white rounded-[8px] border-2 h-12 mb-6;
 }
 
 #home {
@@ -44,19 +193,27 @@
 }
 
 #about {
-    @apply flex flex-col relative mx-auto mt-20 max-w-6xl text-primary-3 lg:translate-x-[-5rem];
+    @apply flex flex-col relative mx-auto mt-20 max-w-6xl text-primary-3 xl:translate-x-[-5rem];
 }
 
 #feature {
-    @apply flex mb-16 md:mt-40 md:mb-32;
+    @apply flex mb-16 md:mb-32 lg:mt-40;
 }
 
 #discover {
-    @apply flex flex-col justify-evenly text-primary-3 mx-10 lg:mx-20 pb-24 lg:flex-row;
+    @apply flex flex-col justify-evenly items-center text-center text-primary-3 md:mx-10 lg:mx-20 pb-24 lg:flex-row;
 }
 
 #plans-pricing {
     @apply flex font-avenir flex-col justify-center text-center pt-20 lg:py-20 bg-background-1;
+}
+
+.valid {
+    @apply border-b-2;
+}
+
+.error {
+    @apply border-red-400 border-b;
 }
 
 /*

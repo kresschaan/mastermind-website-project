@@ -8,10 +8,13 @@
       "email": "christian@gmail.com"
     },
     {
-      "username": "qwe",
-      "password": "qwe",
-      "fullName": "qwe",
-      "email": "qweqwe",
+      "username": "Chris",
+      "password": "$2b$10$8OG0C4x5avCESu5d1At7G.43F5ufaWFRaOKSHRc4iGsHxXfHOjgiu",
+      "firstName": "Christian",
+      "lastName": "Test",
+      "email": "test1234@gmail.com",
+      "plan": "Yearly",
+      "price": "50",
       "id": 2
     }
   ],

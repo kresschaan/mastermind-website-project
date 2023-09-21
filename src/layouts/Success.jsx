@@ -1,9 +1,15 @@
 import loginImg from "../assets/images/mastermind-success.jpg";
 import NavBar from "../components/NavBar";
-
+import { Navigate, useNavigate } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
 
 function Success() {
+    const navigate = useNavigate();
+
+    const handleConfirm = (event) => {
+        navigate("/login");
+    };
+
     return (
         <>
             <NavBar></NavBar>
@@ -16,7 +22,7 @@ function Success() {
                         <FaCheckCircle className="text-3xl mx-2 mt-1 text-green-700"></FaCheckCircle>
                     </div>
 
-                    <form className="w-full px-20 pt-14" action="">
+                    <div className="w-full px-20 pt-14" action="">
                         <div className="mb-8">
                             <p>
                                 Thank You for subscribing to the Mastermind the
@@ -49,11 +55,14 @@ function Success() {
                             </p>
                         </div>
                         <div className="flex flex-col">
-                            <button className="bg-secondary-1 text-white rounded-[8px] border-2 h-12 px-16 mb-32">
-                                Go back to homepage
+                            <button
+                                className="bg-secondary-1 text-white rounded-[8px] border-2 h-12 px-16 mb-32 hover:cursor-pointer"
+                                onClick={() => handleConfirm()}
+                            >
+                                Start learning now
                             </button>
                         </div>
-                    </form>
+                    </div>
                 </div>
 
                 <div className="flex flex-1 items-center">

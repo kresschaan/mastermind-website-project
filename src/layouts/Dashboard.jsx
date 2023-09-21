@@ -1,5 +1,6 @@
 import logo from "../assets/images/mastermind-logo.png";
 import { FaAngleDown, FaBell } from "react-icons/fa";
+import Logout from "../components/Logout.jsx";
 
 function Dashboard() {
     return (
@@ -41,9 +42,9 @@ function Dashboard() {
             </div>
 
             <div className="flex flex-col w-screen">
-                <div className="flex flex-row justify-between p-10 border-b">
+                <div className="flex flex-row justify-between py-10 px-2 border-b">
                     <div>
-                        <h3 className="font-serif mt-1 text-primary-5 text-3xl">
+                        <h3 className="font-serif mt-1 pl-8 text-primary-5 text-3xl">
                             DASHBOARD
                         </h3>
                     </div>
@@ -55,9 +56,11 @@ function Dashboard() {
                             <p>August 31, 2023 11:53 PM</p>
                         </div>
 
-                        <div className="p-2 ml-5 border-l">
+                        <div className="p-2 px-4 ml-5 border-l hover:cursor-pointer">
                             <FaBell className="text-3xl"></FaBell>
                         </div>
+
+                        <Logout></Logout>
                     </div>
                 </div>
 
