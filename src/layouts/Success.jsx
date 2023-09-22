@@ -13,10 +13,10 @@ function Success() {
     return (
         <>
             <NavBar></NavBar>
-            <div className="flex flex-col md:flex-row h-screen">
-                <div className="flex flex-col flex-1 justify-center items-center text-justify">
+            <div className="flex flex-col justify-center items-center md:flex-row h-screen">
+                <div className="flex flex-col flex-1 justify-center items-center text-justify absolute z-10 m-20 bg-white/90 rounded-xl shadow-md lg:relative lg:m-0 lg:rounded-none lg:shadow-none">
                     <div className="flex flex-row mt-20">
-                        <h1 className="font-avernir-heavy font-bold z-10 text-5xl tracking-wider md:text-4xl lg:text-4xl ">
+                        <h1 className="font-avernir-heavy font-bold text-2xl tracking-wider md:text-4xl lg:text-4xl">
                             Payment Successful!
                         </h1>
                         <FaCheckCircle className="text-3xl mx-2 mt-1 text-green-700"></FaCheckCircle>
@@ -65,9 +65,9 @@ function Success() {
                     </div>
                 </div>
 
-                <div className="flex flex-1 items-center">
+                <div className="flex flex-1 items-center h-full">
                     <img
-                        className="object-cover relative h-full "
+                        className="object-cover relative h-full w-full"
                         src={loginImg}
                         alt=""
                     />

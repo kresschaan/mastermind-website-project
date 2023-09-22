@@ -12,6 +12,7 @@ import Home from "./layouts/Home";
 import Dashboard from "./layouts/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import { store } from "./store/index";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 const isAuthenticated = localStorage.getItem("userToken");
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
     {
         path: "/login",
         element: <Login />,
+    },
+    {
+        path: "/loader",
+        element: <LoadingSpinner />,
     },
     {
         path: "/dashboard",

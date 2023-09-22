@@ -5,6 +5,8 @@ import Dashboard from "../layouts/Dashboard";
 import Register from "../layouts/Register";
 import Checkout from "../layouts/Checkout";
 import { useVerifyQuery } from "../store";
+import Success from "../layouts/Success";
+import LoadingSpinner from "./LoadingSpinner";
 
 const ProtectedRoute = ({ isAuthenticated, type, ...rest }) => {
     if (type === "auth") {
@@ -16,7 +18,11 @@ const ProtectedRoute = ({ isAuthenticated, type, ...rest }) => {
             return <Navigate to="/login" />;
         }
 
-        if (data.status === true) {
+        if (isLoading) {
+            return <LoadingSpinner />;
+        }
+
+        if (data && data.status === true) {
             return <Dashboard />;
         } else {
             return <Navigate to="/login" />;
@@ -53,7 +59,7 @@ const ProtectedRoute = ({ isAuthenticated, type, ...rest }) => {
     }
 
     if (type === "success") {
-        return <Navigate to={rest.path} />;
+        return <Success />;
     }
 };
 

@@ -4,7 +4,7 @@ import FormLogin from "../components/FormLogin";
 function Login() {
     return (
         <div className="login-section">
-            <div className="flex flex-1 items-center opacity-60 md:opacity-100">
+            <div className="flex flex-1 items-center">
                 <img
                     className="object-cover relative h-full w-full"
                     src={loginImg}
@@ -13,9 +13,6 @@ function Login() {
             </div>
 
             <div className="login-form">
-                <h1 className="login-title font-avernir-heavy">
-                    Welcome Back!
-                </h1>
                 <FormLogin></FormLogin>
             </div>
         </div>

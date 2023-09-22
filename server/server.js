@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
@@ -6,20 +8,18 @@ const cors = require("cors");
 const axios = require("axios");
 const jwt = require("jsonwebtoken");
 const jsonServer = require("json-server");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const app = express();
 const port = 3010;
 const jsonServerRouter = jsonServer.router("db.json");
-const secretKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTUxOTk4NjYsImV4cCI6MTY5NTIwMzQ2Nn0.E14Go5O0C7vZuq6SuGT8jtE0COKCf1HN-dPjElzIL3Q";
+const secretKey = process.env.SECRET_KEY;
 
 app.use(cors());
 app.use(bodyParser.json());
 
 const verifyTokenMiddleware = (req, res, next) => {
     const token = req.headers.authorization;
-
-    console.log(token);
 
     if (!token) {
         return res.status(401).json({ message: "Unauthorized" });
@@ -96,6 +96,20 @@ app.post("/authenticate", async (req, res) => {
     } catch (error) {
         console.error("Error:", error);
         res.status(500).json({ message: "An error occurred." });
+    }
+});
+
+app.post("/create-payment-intent", async (req, res) => {
+    try {
+        const paymentIntent = await stripe.paymentIntents.create({
+            amount: req.body.amount,
+            currency: "usd",
+            payment_method_types: ["card"],
+        });
+
+        res.status(200).json(paymentIntent);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
     }
 });
 

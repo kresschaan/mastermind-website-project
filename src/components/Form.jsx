@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { useAddUserMutation } from "../store/index";
 import { useNavigate } from "react-router-dom";
-import { openModal, setRegister } from "../store/index";
+import { openModal, setRegister, setAmount } from "../store/index";
 
 function Form() {
     const dispatch = useDispatch();
@@ -22,7 +22,13 @@ function Form() {
         dispatch(setRegister(true));
     };
 
+    const addAmount = (amount) => {
+        console.log(amount);
+        dispatch(setAmount(amount));
+    };
+
     const handleAddUser = (data) => {
+        addAmount(parseInt(data.price));
         addUser(data);
     };
 
@@ -45,19 +51,19 @@ function Form() {
 
     return (
         <form
-            className="2xl:mt-12 w-2/4"
+            className="px-16 bg-white/90 rounded-lg shadow-md lg:p-0 w-8/12 lg:rounded-none lg:shadow-none"
             action=""
             onSubmit={handleSubmit(handleAddUser)}
         >
-            <div className="flex flex-col my-4 2xl:my-4">
+            <div className="flex flex-col my-4 pt-6 2xl:my-4">
                 <label className="form-label" htmlFor="username">
                     USERNAME
                 </label>
                 <input
                     id="username"
-                    className={
-                        errors?.username ? "error" : "valid" + " 2xl:p-4"
-                    }
+                    className={`register-input ${
+                        errors?.username ? "error" : "valid"
+                    }`}
                     type="text"
                     autoComplete="on"
                     {...register("username", {
@@ -80,9 +86,9 @@ function Form() {
                 </label>
                 <input
                     id="password"
-                    className={
-                        errors?.password ? "error" : "valid" + " 2xl:p-4"
-                    }
+                    className={`register-input ${
+                        errors?.password ? "error" : "valid"
+                    }`}
                     type="password"
                     autoComplete="on"
                     {...register("password", {
@@ -105,9 +111,9 @@ function Form() {
                 </label>
                 <input
                     id="firstName"
-                    className={
-                        errors?.firstName ? "error" : "valid" + " 2xl:p-4"
-                    }
+                    className={`register-input ${
+                        errors?.firstName ? "error" : "valid"
+                    }`}
                     type="text"
                     autoComplete="on"
                     {...register("firstName", {
@@ -129,9 +135,9 @@ function Form() {
                 </label>
                 <input
                     id="lastName"
-                    className={
-                        errors?.lastName ? "error" : "valid" + " 2xl:p-4"
-                    }
+                    className={`register-input ${
+                        errors?.lastName ? "error" : "valid"
+                    }`}
                     type="text"
                     autoComplete="on"
                     {...register("lastName", {
@@ -153,7 +159,9 @@ function Form() {
                 </label>
                 <input
                     id="email"
-                    className={errors?.email ? "error" : "valid" + " 2xl:p-4"}
+                    className={`register-input ${
+                        errors?.email ? "error" : "valid"
+                    }`}
                     type="text"
                     autoComplete="on"
                     {...register("email", {
@@ -172,9 +180,9 @@ function Form() {
                 </label>
                 <select
                     id="plan"
-                    className={
-                        errors?.plan ? "error" : "valid" + " 2xl:py-4 px-2"
-                    }
+                    className={`register-input ${
+                        errors?.plan ? "error" : "valid"
+                    }`}
                     {...register("plan", {
                         required: true,
                     })}
@@ -194,9 +202,9 @@ function Form() {
                 </label>
                 <select
                     id="price"
-                    className={
-                        errors?.price ? "error" : "valid" + " 2xl:py-4 px-2"
-                    }
+                    className={`register-input ${
+                        errors?.price ? "error" : "valid"
+                    }`}
                     {...register("price", {
                         required: true,
                     })}
@@ -232,7 +240,7 @@ function Form() {
                     </div>
 
                     <p
-                        className="mt-2 hover:cursor-pointer"
+                        className="mt-2 pb-6 hover:cursor-pointer"
                         onClick={navigateToHomePage}
                     >
                         Go Back to Homepage

@@ -8,14 +8,94 @@
       "email": "christian@gmail.com"
     },
     {
-      "username": "Chris",
-      "password": "$2b$10$8OG0C4x5avCESu5d1At7G.43F5ufaWFRaOKSHRc4iGsHxXfHOjgiu",
-      "firstName": "Christian",
-      "lastName": "Test",
-      "email": "test1234@gmail.com",
-      "plan": "Yearly",
+      "username": "Chris41",
+      "password": "$2b$10$22ZjBcxnpG7th.WmEzigOuHxSz4BjrKERHKca67LlxOG88oGD.M3W",
+      "firstName": "Michael",
+      "lastName": "Jordan",
+      "email": "jordan@gmail.com",
+      "plan": "Monthly",
       "price": "50",
       "id": 2
+    },
+    {
+      "username": "Michael",
+      "password": "$2b$10$ye0I54ZS9AuzuN56eV7sLuymTKelOiuCZMCnRFdJFywtEfrWZ7Hca",
+      "firstName": "Michael",
+      "lastName": "Jordan",
+      "email": "jordan@gmail.com",
+      "plan": "Yearly",
+      "price": "50",
+      "id": 3
+    },
+    {
+      "username": "Chris",
+      "password": "$2b$10$UgkCgB0NBJShaSSAXTO4eOhYvHb57zFUuppejZSDC0fPX0fn2uU72",
+      "firstName": "Michael",
+      "lastName": "Jordan",
+      "email": "jordan@gmail.com",
+      "plan": "Yearly",
+      "price": "20",
+      "id": 4
+    },
+    {
+      "username": "Chris",
+      "password": "$2b$10$q2Ge1ICuT49vr0L6jEqan.ERBTBJ0/Uwd2isneTL3guflYOqt4KJ.",
+      "firstName": "Michael",
+      "lastName": "Jordan",
+      "email": "jordan@gmail.com",
+      "plan": "Yearly",
+      "price": "20",
+      "id": 5
+    },
+    {
+      "username": "Chris",
+      "password": "$2b$10$KS3p5Ad1xskP.EfPoTvuGOfj9EftVtNXv24ZCmRVPAaRSV9w5c5pi",
+      "firstName": "Michael",
+      "lastName": "Jordan",
+      "email": "jordan@gmail.com",
+      "plan": "Yearly",
+      "price": "50",
+      "id": 6
+    },
+    {
+      "username": "Chris",
+      "password": "$2b$10$MMsZYJ1bIr.Ddb.mve9hjuOmQLiwQPbfuc/62oF1BhgfTjVRN6lVS",
+      "firstName": "Michael",
+      "lastName": "Jordan",
+      "email": "jordan@gmail.com",
+      "plan": "Yearly",
+      "price": "20",
+      "id": 7
+    },
+    {
+      "username": "Chris",
+      "password": "$2b$10$8aHr4nux0Htxre0lf6jOSeAKGlA9Gwz.buMTiQxWu85WOIzdAqm5K",
+      "firstName": "Michael",
+      "lastName": "Jordan",
+      "email": "michael@gmail.com",
+      "plan": "Yearly",
+      "price": "50",
+      "id": 8
+    },
+    {
+      "username": "Chris",
+      "password": "$2b$10$esOlZh9tk2XIv8TMW9x5PuC2vISeIVe1YcbWkcqOHsTvSkS7MyDi6",
+      "firstName": "Michael",
+      "lastName": "Jordan",
+      "email": "michael@gmail.com",
+      "plan": "Yearly",
+      "price": "50",
+      "id": 9
+    },
+    {
+      "username": "Chris",
+      "password": "$2b$10$Jq4kFJc/6pz8vTyqxu5vY.sCY3hJzoRc91ma.1ag/ogvlxhI0V4bG",
+      "firstName": "Jordan",
+      "lastName": "Michael",
+      "email": "jordan@gmail.com",
+      "plan": "Yearly",
+      "price": "50",
+      "id": 10
     }
   ],
   "menu": [],

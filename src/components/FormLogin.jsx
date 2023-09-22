@@ -37,10 +37,11 @@ function FormLogin(params) {
 
     return (
         <form
-            className="w-2/4 mb-12"
+            className="p-16 bg-white/90 rounded-lg shadow-md lg:p-0 lg:w-8/12 lg:rounded-none lg:shadow-none w"
             action=""
             onSubmit={handleSubmit(handleAuthenticate)}
         >
+            <h1 className="login-title font-avernir-heavy">Welcome Back!</h1>
             <div className="flex flex-col mb-6">
                 <label className="form-login-label" htmlFor="username">
                     USERNAME
@@ -66,7 +67,7 @@ function FormLogin(params) {
                 {loginErr}
             </div>
 
-            <div className="flex flex-col mb-32">
+            <div className="flex flex-col mb-20">
                 <label className="form-login-label" htmlFor="password">
                     PASSWORD
                 </label>
