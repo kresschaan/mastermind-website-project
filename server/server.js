@@ -124,6 +124,17 @@ app.get("/verify", verifyTokenMiddleware, async (req, res) => {
     }
 });
 
+app.get("/test", async (req, res) => {
+    try {
+        res.json({
+            message: "You have access to the protected route",
+            status: true,
+        });
+    } catch (error) {
+        res.status(500).json({ message: error });
+    }
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
