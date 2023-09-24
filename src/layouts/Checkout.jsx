@@ -11,6 +11,8 @@ import CheckoutForm from "../components/CheckoutForm";
 import axios from "axios";
 
 function Checkout() {
+    const baseURL = "http://localhost:3010/";
+    // const baseURL = "https://mastermind-server.onrender.com/";
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [clientSecret, setClientSecret] = useState("");
@@ -30,7 +32,7 @@ function Checkout() {
         const fetchClientSecret = async () => {
             try {
                 axios
-                    .post("http://localhost:3010/create-payment-intent", {
+                    .post(`${baseURL}create-payment-intent`, {
                         amount: 50,
                     })
                     .then((response) => {
