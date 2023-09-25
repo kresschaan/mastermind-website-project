@@ -4,10 +4,17 @@ import {
     PaymentElement,
     CardElement,
 } from "@stripe/react-stripe-js";
+import { useDispatch } from "react-redux";
+import { setRegister } from "../store/index";
 
 const CheckoutForm = ({ clientSecret, stripePromise, paymentID }) => {
     const stripe = useStripe();
     const elements = useElements();
+    const dispatch = useDispatch();
+
+    const isRegistered = () => {
+        localStorage.setItem("isRegistered", true);
+    };
 
     const handlePayment = async (e) => {
         e.preventDefault();
@@ -21,12 +28,15 @@ const CheckoutForm = ({ clientSecret, stripePromise, paymentID }) => {
                 return;
             }
 
+            isRegistered();
+
             const result = await stripe.confirmPayment({
                 elements,
                 confirmParams: {
                     // Return URL where the customer should be redirected after the PaymentIntent is confirmed.
-                    return_url:
-                        "https://mastermind-website-project.vercel.app/success",
+                    return_url: "http://localhost:5173/success",
+                    // return_url:
+                    //     "https://mastermind-website-project.vercel.app/success",
                 },
             });
 
@@ -45,9 +55,17 @@ const CheckoutForm = ({ clientSecret, stripePromise, paymentID }) => {
     };
 
     return (
-        <form onSubmit={handlePayment}>
+        <form
+            className="w-8/12 p-20 bg-white/90 rounded-lg shadow-md lg:rounded-none lg:shadow-none"
+            onSubmit={handlePayment}
+        >
             <PaymentElement />
-            <button disabled={!stripe}>Submit</button>
+            <button
+                className="bg-secondary-1 text-white rounded-[8px] border-2 h-12 px-16 mt-10 w-full hover:cursor-pointer"
+                disabled={!stripe}
+            >
+                Submit
+            </button>
         </form>
     );
 };

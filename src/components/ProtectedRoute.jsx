@@ -29,38 +29,36 @@ const ProtectedRoute = ({ isAuthenticated, type, ...rest }) => {
         }
     }
 
-    // if (type === "checkout") {
-    //     const isRegistered = useSelector((state) => {
-    //         return state.register.isRegistered;
-    //     });
-
-    //     if (isRegistered === false) {
-    //         return <Navigate to="/register" />;
-    //     } else {
-    //         return <Navigate to={rest.path} />;
-    //     }
-    // }
-
-    // if (type === "success") {
-    //     const isRegistered = useSelector((state) => {
-    //         return state.register.isRegistered;
-    //     });
-
-    //     if (isRegistered === false) {
-    //         return <Navigate to="/register" />;
-    //     } else {
-    //         return <Navigate to={rest.path} />;
-    //     }
-    // }
-
     if (type === "checkout") {
-        console.log(rest.path);
-        return <Checkout />;
+        const isRegistered = localStorage.getItem("isRegistered");
+
+        if (isRegistered === "false") {
+            return <Navigate to="/register" />;
+        } else {
+            //  return <Navigate to={rest.path} />;
+            return <Checkout />;
+        }
     }
 
     if (type === "success") {
-        return <Success />;
+        const isRegistered = localStorage.getItem("isRegistered");
+
+        if (isRegistered === "false") {
+            return <Navigate to="/register" />;
+        } else {
+            // return <Navigate to={rest.path} />;
+            return <Success />;
+        }
     }
+
+    // if (type === "checkout") {
+    //     console.log(rest.path);
+    //     return <Checkout />;
+    // }
+
+    // if (type === "success") {
+    //     return <Success />;
+    // }
 };
 
 export default ProtectedRoute;

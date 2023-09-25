@@ -4,7 +4,7 @@ import { useAuthenticateMutation } from "../store";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function FormLogin(params) {
+function FormLogin() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {
@@ -37,7 +37,7 @@ function FormLogin(params) {
 
     return (
         <form
-            className="p-16 bg-white/90 rounded-lg shadow-md lg:p-0 lg:w-8/12 lg:rounded-none lg:shadow-none w"
+            className="p-16 bg-white/90 rounded-lg shadow-md lg:p-0 lg:w-8/12 lg:rounded-none lg:shadow-none"
             action=""
             onSubmit={handleSubmit(handleAuthenticate)}
         >
@@ -97,7 +97,7 @@ function FormLogin(params) {
 
                 <div className="forgot-password">
                     <p className="font-light pr-1">Forgot your password?</p>
-                    <p>Click Here</p>
+                    <p>Contact Customer Support</p>
                 </div>
             </div>
         </form>

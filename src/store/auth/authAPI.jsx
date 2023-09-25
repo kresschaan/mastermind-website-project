@@ -5,6 +5,7 @@ const authApi = createApi({
     reducersPath: "auth",
     baseQuery: fetchBaseQuery({
         baseUrl: "http://localhost:3010",
+        // baseUrl: "https://mastermind-server.onrender.com/",
     }),
     endpoints(builder) {
         return {

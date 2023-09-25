@@ -9,7 +9,7 @@ function Discover() {
                 </h1>
                 <h2 className="pb-2">For whom is the mastermind intended?</h2>
 
-                <div className="p-8">
+                <div className="p-8 max-w-2xl">
                     <p className="discover-item">
                         The Mastermind Experience is for individuals who wants
                         to take their careers and goals to the next level. We

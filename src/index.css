@@ -60,6 +60,16 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
 .home-container {
     @apply pb-[150px] flex flex-col items-center justify-center text-white h-screen;
 }
@@ -157,7 +167,7 @@ input[type="number"] {
 }
 
 .register-input {
-    @apply bg-inherit p-2 border-b border-black lg:border-slate-300 2xl:p-4;
+    @apply bg-inherit p-2 border-b border-black lg:border-slate-300;
 }
 
 .register-select {
@@ -173,7 +183,7 @@ input[type="number"] {
 }
 
 .login-title {
-    @apply font-bold z-10 mb-24 text-xl tracking-wide md:text-black lg:text-3xl xl:text-4xl;
+    @apply font-bold z-10 mb-16 text-xl tracking-wide md:text-black lg:text-3xl xl:text-4xl;
 }
 
 .login-button {

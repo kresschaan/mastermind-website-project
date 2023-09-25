@@ -1,4 +1,14 @@
+import PlanPriceButton from "../components/PriceButton";
+import PlanSelect from "../components/PlanSelect";
+import { useState } from "react";
+
 function PlanPrice() {
+    const [plan, setPlan] = useState();
+
+    const handleSelect = (plan) => {
+        setPlan(plan);
+    };
+
     return (
         <div id="plans-pricing">
             <h1 className="text-4xl pb-2">Best Pricing Plan for You</h1>
@@ -7,18 +17,7 @@ function PlanPrice() {
             </h2>
 
             <div className="plans-price-container">
-                <div className="plan-container">
-                    <h4 className="pr-10 mb-5 text-xl">Choose plan</h4>
-
-                    <div className="plan-item mb-2">
-                        <input type="radio" />
-                        <label className="ml-4">Yearly Billing</label>
-                    </div>
-                    <div className="plan-item ml-2">
-                        <input type="radio" />
-                        <label className="ml-4">Monthy Billing</label>
-                    </div>
-                </div>
+                <PlanSelect handleSelect={handleSelect}></PlanSelect>
 
                 <div className="pricing-card-standard">
                     <h3 className="pricing-header">Discover</h3>
@@ -36,7 +35,10 @@ function PlanPrice() {
                     <p className="pb-2 mb-14">Weekly Trainings</p>
 
                     <div className="pt-10 pb-5 justify-center">
-                        <button className="pricing-button">Select Plan</button>
+                        <PlanPriceButton
+                            price={20}
+                            plan={plan}
+                        ></PlanPriceButton>
                     </div>
                 </div>
 
@@ -57,7 +59,10 @@ function PlanPrice() {
                     <p className="pb-2">Weekly Trainings</p>
 
                     <div className="pt-16 pb-5 justify-center">
-                        <button className="pricing-button">Select Plan</button>
+                        <PlanPriceButton
+                            price={50}
+                            plan={plan}
+                        ></PlanPriceButton>
                     </div>
                 </div>
 
@@ -80,9 +85,10 @@ function PlanPrice() {
                         <p className="pb-4">Weekly Trainings</p>
 
                         <div className="pb-4 justify-center">
-                            <button className="pricing-button">
-                                Select Plan
-                            </button>
+                            <PlanPriceButton
+                                price={100}
+                                plan={plan}
+                            ></PlanPriceButton>
                         </div>
                     </div>
                 </div>

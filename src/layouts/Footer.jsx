@@ -1,6 +1,7 @@
 import quoteImg from "../assets/images/mastermind-quote-section.jpg";
 import footerLogo from "../assets/images/mastermind-logo.png";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import FooterNav from "../components/FooterNav";
 
 function Footer() {
     return (
@@ -38,41 +39,7 @@ function Footer() {
                 {/* Navigation and Contact */}
                 <div className="flex flex-col grow">
                     <div className="flex flex-col lg:flex-row justify-between mx-12 mt-8 mb-2">
-                        <div className="flex flex-col lg:flex-row">
-                            <div className="flex flex-col">
-                                <div className="footer-nav-item">
-                                    <a className="ml-2" href="#">
-                                        Home
-                                    </a>
-                                </div>
-                                <div className="footer-nav-item">
-                                    <a className="ml-2" href="#">
-                                        Plan & Pricing
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col lg:mx-24 xl:mx-36">
-                                <div className="footer-nav-item">
-                                    <a className="ml-2" href="#">
-                                        About
-                                    </a>
-                                </div>
-                                <div className="footer-nav-item">
-                                    <a className="ml-2" href="#">
-                                        Sign Up
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col">
-                                <div className="footer-nav-item">
-                                    <a className="ml-2" href="#">
-                                        Log In
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <FooterNav isLink={false}></FooterNav>
 
                         <div className="justify-center">
                             <button className="bg-secondary-1 text-white rounded-[14px] border-2 h-12 px-16">

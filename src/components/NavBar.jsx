@@ -6,7 +6,7 @@ function NavBar({ isLink }) {
         <div className="flex justify-between bg-primary-4/40 fixed z-30 top-0 w-screen">
             <div className="flex bg-white-100">
                 <img
-                    className="h-16 w-16 md:h-24 md:w-24"
+                    className="h-16 w-16 ml-2 md:h-24 md:w-24"
                     src={navlogo}
                     alt=""
                 />

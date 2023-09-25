@@ -1,18 +1,25 @@
 import loginImg from "../assets/images/mastermind-success.jpg";
 import NavBar from "../components/NavBar";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { setRegister } from "../store/index";
 
 function Success() {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
+    const isRegistered = () => {
+        localStorage.setItem("isRegistered", false);
+    };
     const handleConfirm = (event) => {
         navigate("/login");
+        isRegistered();
     };
 
     return (
         <>
-            <NavBar></NavBar>
+            <NavBar isLink={true}></NavBar>
             <div className="flex flex-col justify-center items-center md:flex-row h-screen">
                 <div className="flex flex-col flex-1 justify-center items-center text-justify absolute z-10 m-20 bg-white/90 rounded-xl shadow-md lg:relative lg:m-0 lg:rounded-none lg:shadow-none">
                     <div className="flex flex-row mt-20">

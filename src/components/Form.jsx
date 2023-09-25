@@ -5,25 +5,33 @@ import { useAddUserMutation } from "../store/index";
 import { useNavigate } from "react-router-dom";
 import { openModal, setRegister, setAmount } from "../store/index";
 
-function Form() {
+function Form({ priceVal, planVal }) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
     const {
         register,
         handleSubmit,
         reset,
         formState: { errors },
     } = useForm();
-
     const [addUser, addUserRes] = useAddUserMutation();
 
+    const [selectedPrice, setSelectedPrice] = useState(priceVal);
+    const [selectedPlan, setSelectedPlan] = useState(planVal);
+
+    const handlePriceChange = (event) => {
+        setSelectedPrice(event.target.value);
+    };
+
+    const handlePlanChange = (event) => {
+        setSelectedPlan(event.target.value);
+    };
+
     const isRegistered = () => {
-        dispatch(setRegister(true));
+        localStorage.setItem("isRegistered", true);
     };
 
     const addAmount = (amount) => {
-        console.log(amount);
         dispatch(setAmount(amount));
     };
 
@@ -51,7 +59,7 @@ function Form() {
 
     return (
         <form
-            className="px-16 bg-white/90 rounded-lg shadow-md lg:p-0 w-8/12 lg:rounded-none lg:shadow-none"
+            className="px-16 bg-white/90 rounded-lg shadow-md md:mt-0 lg:p-0 md:w-8/12 lg:rounded-none lg:shadow-none overflow-auto no-scrollbar"
             action=""
             onSubmit={handleSubmit(handleAddUser)}
         >
@@ -186,6 +194,8 @@ function Form() {
                     {...register("plan", {
                         required: true,
                     })}
+                    value={selectedPlan}
+                    onChange={handlePlanChange}
                 >
                     <option defaultValue></option>
                     <option value="Yearly">Yearly</option>
@@ -208,6 +218,8 @@ function Form() {
                     {...register("price", {
                         required: true,
                     })}
+                    value={selectedPrice}
+                    onChange={handlePriceChange}
                 >
                     <option defaultValue></option>
                     <option value="20">$20</option>
@@ -219,15 +231,15 @@ function Form() {
                 )}
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
                 <input
                     type="submit"
                     value="Get Started"
-                    className="form-button"
+                    className="form-button hover:cursor-pointer"
                 ></input>
 
                 <div className="flex flex-col justify-center text-center">
-                    <div className="flex flex-row justify-center">
+                    <div className="flex flex-col sm:flex-row justify-center">
                         <p className="font-light pr-1">
                             Already have an account?
                         </p>

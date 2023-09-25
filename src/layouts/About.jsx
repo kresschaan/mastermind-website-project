@@ -1,8 +1,13 @@
+import { useRef } from "react";
 import aboutImg from "../assets/images/masterclass-about-section.jpg";
 
 function About() {
+    const sectionRefs = {
+        about: useRef(null),
+    };
+
     return (
-        <div id="about">
+        <div id="about" ref={sectionRefs.about}>
             <img className="" src={aboutImg} alt="" />
             <div className="about-container">
                 <h1 className="font-serif text-4xl pb-2">

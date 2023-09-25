@@ -1,18 +1,23 @@
 import { MdMenu } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import useScroll from "../hooks/useScroll.jsx";
+import { useDispatch } from "react-redux";
 
 function NavBarItems({ isLink }) {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const isRegistered = () => {
+        localStorage.setItem("isRegistered", false);
+    };
 
     const checkNav = (section) => {
         if (isLink || section === "register" || section === "login") {
             navigate(`/${section}`, { replace: true });
         }
 
-        console.log(section);
-
         useScroll(section);
+        isRegistered();
     };
 
     return (
