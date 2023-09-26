@@ -28,7 +28,7 @@ function Register() {
                     />
                 </div>
 
-                <div className="flex flex-col flex-1 justify-center items-center absolute  overflow-auto w-full h-screen lg:relative">
+                <div className="flex flex-col flex-1 justify-center items-center absolute overflow-auto w-full h-screen lg:relative">
                     {state ? (
                         <Form
                             priceVal={state.price}

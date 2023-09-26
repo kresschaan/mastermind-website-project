@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useAddUserMutation } from "../store/index";
 import { useNavigate } from "react-router-dom";
 import { openModal, setRegister, setAmount } from "../store/index";
+import { ImSpinner3 } from "react-icons/im";
 
 function Form({ priceVal, planVal }) {
     const dispatch = useDispatch();
@@ -59,7 +60,7 @@ function Form({ priceVal, planVal }) {
 
     return (
         <form
-            className="px-16 bg-white/90 rounded-lg shadow-md md:mt-0 lg:p-0 md:w-8/12 lg:rounded-none lg:shadow-none overflow-auto no-scrollbar"
+            className="px-16 bg-white/90 rounded-lg shadow-md w-9/12 md:mt-0 lg:p-0 md:w-8/12 lg:rounded-none lg:shadow-none overflow-auto no-scrollbar"
             action=""
             onSubmit={handleSubmit(handleAddUser)}
         >
@@ -102,6 +103,8 @@ function Form({ priceVal, planVal }) {
                     {...register("password", {
                         required: true,
                         minLength: 8,
+                        pattern:
+                            /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
                     })}
                 ></input>
                 {errors.password && (
@@ -232,11 +235,16 @@ function Form({ priceVal, planVal }) {
             </div>
 
             <div className="flex flex-col ">
-                <input
+                <button
                     type="submit"
-                    value="Get Started"
-                    className="form-button hover:cursor-pointer"
-                ></input>
+                    className="flex justify-center items-center form-button hover:cursor-pointer"
+                >
+                    {addUserRes.isLoading ? (
+                        <ImSpinner3 className="text-2xl animate-spin"></ImSpinner3>
+                    ) : (
+                        "Get Started"
+                    )}
+                </button>
 
                 <div className="flex flex-col justify-center text-center">
                     <div className="flex flex-col sm:flex-row justify-center">

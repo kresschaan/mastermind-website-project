@@ -1,7 +1,7 @@
 import quoteImg from "../assets/images/mastermind-quote-section.jpg";
 import footerLogo from "../assets/images/mastermind-logo.png";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import FooterNav from "../components/FooterNav";
+import Social from "../components/Social";
 
 function Footer() {
     return (
@@ -52,17 +52,7 @@ function Footer() {
 
                     {/* Social Icons and Phone Number */}
                     <div className="flex flex-row justify-between mx-8">
-                        <div className="flex flex-row">
-                            <div className="pr-2">
-                                <FaFacebook className="footer-icon" />
-                            </div>
-                            <div className="pr-2">
-                                <FaTwitter className="footer-icon" />
-                            </div>
-                            <div className="pr-2">
-                                <FaInstagram className="footer-icon" />
-                            </div>
-                        </div>
+                        <Social></Social>
 
                         <div className="pr-2">
                             <p>Give us a Call (023) 456-2312</p>

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useAuthenticateMutation } from "../store";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { ImSpinner3 } from "react-icons/im";
 
 function FormLogin() {
     const dispatch = useDispatch();
@@ -93,7 +94,13 @@ function FormLogin() {
             </div>
 
             <div className="flex flex-col">
-                <button className="login-button">Login</button>
+                <button className="flex justify-center items-center login-button">
+                    {results.isLoading ? (
+                        <ImSpinner3 className="text-2xl animate-spin"></ImSpinner3>
+                    ) : (
+                        "Login"
+                    )}
+                </button>
 
                 <div className="forgot-password">
                     <p className="font-light pr-1">Forgot your password?</p>

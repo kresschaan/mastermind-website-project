@@ -1,12 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
 import checkoutImg from "../assets/images/mastermind-checkout.jpg";
-import NavBar from "../components/NavBar";
 import { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-import { usePaymentMutation } from "../store";
 import CheckoutForm from "../components/CheckoutForm";
 import axios from "axios";
 
@@ -14,11 +11,8 @@ function Checkout() {
     const baseURL = "http://localhost:3010/";
     // const baseURL = "https://mastermind-server.onrender.com/";
     const navigate = useNavigate();
-    const dispatch = useDispatch();
     const [clientSecret, setClientSecret] = useState("");
     const [paymentID, setPaymentID] = useState("");
-
-    const [payment, { isLoading, isError, error, data }] = usePaymentMutation();
 
     const stripePromise = loadStripe(
         import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY
@@ -58,8 +52,6 @@ function Checkout() {
         // passing the client secret obtained from the server
         clientSecret: clientSecret,
     };
-
-    console.log(clientSecret);
 
     return (
         <div>

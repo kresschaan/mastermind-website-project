@@ -4,13 +4,12 @@ function PriceButton({ price, plan }) {
     const navigate = useNavigate();
 
     const handleSelectPlan = () => {
-        if (price && plan) {
-            navigate("/register", { state: { price: price, plan: plan } });
-        }
+        const state = {
+            price: price || "",
+            plan: plan || "",
+        };
 
-        if (!price && !plan) {
-            navigate("/register", { state: { price: "", plan: "" } });
-        }
+        navigate("/register", { state });
     };
 
     return (

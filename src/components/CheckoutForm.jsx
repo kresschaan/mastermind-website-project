@@ -6,18 +6,26 @@ import {
 } from "@stripe/react-stripe-js";
 import { useDispatch } from "react-redux";
 import { setRegister } from "../store/index";
+import { useState } from "react";
+import { ImSpinner3 } from "react-icons/im";
 
 const CheckoutForm = ({ clientSecret, stripePromise, paymentID }) => {
     const stripe = useStripe();
     const elements = useElements();
     const dispatch = useDispatch();
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const isRegistered = () => {
         localStorage.setItem("isRegistered", true);
     };
 
+    const submitSpinner = () => {
+        setIsSubmitted((prevState) => !prevState);
+    };
+
     const handlePayment = async (e) => {
         e.preventDefault();
+        submitSpinner();
 
         try {
             const stripe = await stripePromise;
@@ -44,9 +52,7 @@ const CheckoutForm = ({ clientSecret, stripePromise, paymentID }) => {
                 // Show error to your customer (for example, payment details incomplete)
                 console.log(result.error.message);
             } else {
-                // Your customer will be redirected to your `return_url`. For some payment
-                // methods like iDEAL, your customer will be redirected to an intermediate
-                // site first to authorize the payment, then redirected to the `return_url`.
+                submitSpinner();
             }
         } catch (error) {
             // Handle errors here
@@ -61,10 +67,14 @@ const CheckoutForm = ({ clientSecret, stripePromise, paymentID }) => {
         >
             <PaymentElement />
             <button
-                className="bg-secondary-1 text-white rounded-[8px] border-2 h-12 px-16 mt-10 w-full hover:cursor-pointer"
+                className="flex justify-center items-center bg-secondary-1 text-white rounded-[8px] border-2 h-12 px-16 mt-10 w-full hover:cursor-pointer"
                 disabled={!stripe}
             >
-                Submit
+                {isSubmitted ? (
+                    <ImSpinner3 className="text-2xl animate-spin"></ImSpinner3>
+                ) : (
+                    "Submit"
+                )}
             </button>
         </form>
     );
