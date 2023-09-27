@@ -3,7 +3,11 @@ import discoverImg from "../assets/images/mastermind-who-section.jpg";
 function Discover() {
     return (
         <div id="discover">
-            <div className="discover-container">
+            <div
+                className="discover-container"
+                data-aos="fade-left"
+                data-aos-duration="4000"
+            >
                 <h1 className="pb-2 font-serif text-4xl">
                     Discovering the Mastermind
                 </h1>
@@ -27,7 +31,11 @@ function Discover() {
                     </p>
                 </div>
             </div>
-            <div className="flex max-w-md lg:pl-10">
+            <div
+                className="flex max-w-md lg:pl-10"
+                data-aos="fade-right"
+                data-aos-duration="4000"
+            >
                 <img src={discoverImg} alt="" />
             </div>
         </div>

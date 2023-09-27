@@ -71,6 +71,21 @@ app.post("/api/create-user", async (req, res) => {
     }
 });
 
+app.post("/api/create-message", async (req, res) => {
+    try {
+        const data = req.body;
+
+        const response = await axios.post(`${fireBaseURL}/contact.json`, data);
+
+        res.status(200).json({
+            message: "Contact Us message successfully created.",
+        });
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).json({ message: "An error occurred." });
+    }
+});
+
 app.post("/authenticate", async (req, res) => {
     try {
         const { username, password } = req.body;

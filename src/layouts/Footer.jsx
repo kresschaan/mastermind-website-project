@@ -2,8 +2,15 @@ import quoteImg from "../assets/images/mastermind-quote-section.jpg";
 import footerLogo from "../assets/images/mastermind-logo.png";
 import FooterNav from "../components/FooterNav";
 import Social from "../components/Social";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+    const navigate = useNavigate();
+
+    const handleContactUs = () => {
+        navigate("/contact");
+    };
+
     return (
         <div className="footer-section">
             <div className="footer-feature">
@@ -42,7 +49,10 @@ function Footer() {
                         <FooterNav isLink={false}></FooterNav>
 
                         <div className="justify-center">
-                            <button className="bg-secondary-1 text-white rounded-[14px] border-2 h-12 px-16">
+                            <button
+                                className="bg-secondary-1 text-white rounded-[14px] border-2 h-12 px-16"
+                                onClick={handleContactUs}
+                            >
                                 Contact Us
                             </button>
                         </div>

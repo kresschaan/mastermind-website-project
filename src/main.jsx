@@ -13,6 +13,7 @@ import Dashboard from "./layouts/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import { store } from "./store/index";
 import LoadingSpinner from "./components/LoadingSpinner";
+import Contact from "./layouts/Contact";
 
 const isAuthenticated = localStorage.getItem("userToken");
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
     {
         path: "/loader",
         element: <LoadingSpinner />,
+    },
+    {
+        path: "/contact",
+        element: <Contact />,
     },
     {
         path: "/dashboard",

@@ -1,3 +1,4 @@
+import AOS from "aos";
 import NavBar from "./components/NavBar";
 import Home from "./layouts/Home";
 import About from "./layouts/About";
@@ -7,9 +8,11 @@ import PlanPrice from "./layouts/PlanPrice";
 import Footer from "./layouts/Footer";
 import useScroll from "./hooks/useScroll.jsx";
 import { useState, useEffect } from "react";
+import "aos/dist/aos.css";
 
 function App({ focusOn }) {
     useEffect(() => {
+        AOS.init();
         useScroll(focusOn);
     }, []);
 

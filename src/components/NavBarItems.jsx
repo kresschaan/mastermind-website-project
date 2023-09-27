@@ -41,7 +41,7 @@ function NavBarItems({ isLink }) {
             <div
                 id="menu-btn"
                 className={`h-12 w-12 mr-4 mt-2 text-white hover:cursor-pointer md:hidden ${
-                    isMenuOpen ? "" : "open"
+                    isMenuOpen ? "open" : ""
                 }`}
                 onClick={() => navToggle()}
             >
@@ -91,7 +91,7 @@ function NavBarItems({ isLink }) {
                 <div
                     id="menu-btn"
                     className={`h-12 w-12 mr-4 mt-2 text-white hover:cursor-pointer md:hidden ${
-                        isMenuOpen ? "" : "open"
+                        isMenuOpen ? "open" : ""
                     }`}
                     onClick={() => navToggle()}
                 >

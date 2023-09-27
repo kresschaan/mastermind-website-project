@@ -8,13 +8,13 @@ function About() {
 
     return (
         <div id="about" ref={sectionRefs.about}>
-            <img className="" src={aboutImg} alt="" />
+            <img className="" src={aboutImg} alt="" data-aos="fade-right" />
             <div className="about-container">
                 <h1 className="font-serif text-4xl pb-2">
                     What is the Mastermind?
                 </h1>
                 <h2 className="pb-5 font-serif">Meet & Learn from Experts</h2>
-                <p className="about-item">
+                <p className="about-item space-y-1.5">
                     The Mastermind Experience is a hub of collective
                     intelligence and boundless inspiration. Our platform is
                     designed for those who crave the exhilarating pursuit of

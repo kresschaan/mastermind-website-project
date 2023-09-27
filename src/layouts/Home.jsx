@@ -1,7 +1,11 @@
 function Home() {
     return (
         <div id="home">
-            <div className="home-container">
+            <div
+                className="home-container"
+                data-aos="fade-down"
+                data-aos-duration="2000"
+            >
                 <h1 className="home-item tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-8xl">
                     Mastermind
                 </h1>
