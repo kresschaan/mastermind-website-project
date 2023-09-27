@@ -8,8 +8,8 @@ import CheckoutForm from "../components/CheckoutForm";
 import axios from "axios";
 
 function Checkout() {
-    const baseURL = "http://localhost:3010/";
-    // const baseURL = "https://mastermind-server.onrender.com/";
+    // const baseURL = "http://localhost:3010/";
+    const baseURL = "https://mastermind-server.onrender.com/";
     const navigate = useNavigate();
     const [clientSecret, setClientSecret] = useState("");
     const [paymentID, setPaymentID] = useState("");
