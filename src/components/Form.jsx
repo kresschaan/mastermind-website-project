@@ -60,11 +60,11 @@ function Form({ priceVal, planVal }) {
 
     return (
         <form
-            className="px-16 bg-white/90 rounded-lg shadow-md w-9/12 md:mt-0 lg:p-0 md:w-8/12 lg:rounded-none lg:shadow-none overflow-auto no-scrollbar"
+            className="no-scrollbar w-9/12 overflow-auto rounded-lg bg-white/90 px-16 shadow-md md:mt-0 md:w-8/12 lg:rounded-none lg:p-0 lg:shadow-none"
             action=""
             onSubmit={handleSubmit(handleAddUser)}
         >
-            <div className="flex flex-col my-4 pt-6 2xl:my-4">
+            <div className="group my-4 flex flex-col pt-6 2xl:my-4 ">
                 <label className="form-label" htmlFor="username">
                     USERNAME
                 </label>
@@ -89,7 +89,7 @@ function Form({ priceVal, planVal }) {
                 )}
             </div>
 
-            <div className="flex flex-col my-4 2xl:mb-4">
+            <div className="group my-4 flex flex-col 2xl:mb-4">
                 <label className="form-label" htmlFor="password">
                     PASSWORD
                 </label>
@@ -116,7 +116,7 @@ function Form({ priceVal, planVal }) {
                 )}
             </div>
 
-            <div className="flex flex-col my-4 2xl:mb-4">
+            <div className="group my-4 flex flex-col 2xl:mb-4">
                 <label className="form-label" htmlFor="firstName">
                     FIRST NAME
                 </label>
@@ -140,7 +140,7 @@ function Form({ priceVal, planVal }) {
                 )}
             </div>
 
-            <div className="flex flex-col my-4 2xl:mb-4">
+            <div className="group my-4 flex flex-col 2xl:mb-4">
                 <label className="form-label" htmlFor="lastName">
                     LAST NAME
                 </label>
@@ -164,7 +164,7 @@ function Form({ priceVal, planVal }) {
                 )}
             </div>
 
-            <div className="flex flex-col my-4 2xl:mb-4">
+            <div className="group my-4 flex flex-col 2xl:mb-4">
                 <label className="form-label" htmlFor="email">
                     EMAIL
                 </label>
@@ -185,7 +185,7 @@ function Form({ priceVal, planVal }) {
                 )}
             </div>
 
-            <div className="flex flex-col my-4 2xl:mb-4">
+            <div className="group my-4 flex flex-col 2xl:mb-4">
                 <label className="form-label" htmlFor="email">
                     PLAN
                 </label>
@@ -209,7 +209,7 @@ function Form({ priceVal, planVal }) {
                 )}
             </div>
 
-            <div className="flex flex-col mb-10 2xl:mb-20">
+            <div className="group mb-10 flex flex-col 2xl:mb-20">
                 <label className="form-label" htmlFor="email">
                     PRICE
                 </label>
@@ -237,18 +237,18 @@ function Form({ priceVal, planVal }) {
             <div className="flex flex-col ">
                 <button
                     type="submit"
-                    className="flex justify-center items-center form-button hover:cursor-pointer"
+                    className="form-button flex items-center justify-center hover:cursor-pointer"
                 >
                     {addUserRes.isLoading ? (
-                        <ImSpinner3 className="text-2xl animate-spin"></ImSpinner3>
+                        <ImSpinner3 className="animate-spin text-2xl"></ImSpinner3>
                     ) : (
                         "Get Started"
                     )}
                 </button>
 
                 <div className="flex flex-col justify-center text-center">
-                    <div className="flex flex-col sm:flex-row justify-center">
-                        <p className="font-light pr-1">
+                    <div className="flex flex-col justify-center sm:flex-row">
+                        <p className="pr-1 font-light">
                             Already have an account?
                         </p>
                         <p

@@ -13,7 +13,7 @@ function Discover() {
                 </h1>
                 <h2 className="pb-2">For whom is the mastermind intended?</h2>
 
-                <div className="p-8 max-w-2xl">
+                <div className="max-w-2xl p-8">
                     <p className="discover-item">
                         The Mastermind Experience is for individuals who wants
                         to take their careers and goals to the next level. We
@@ -36,7 +36,12 @@ function Discover() {
                 data-aos="fade-right"
                 data-aos-duration="4000"
             >
-                <img src={discoverImg} alt="" />
+                <img
+                    src={discoverImg}
+                    alt="Discover Image - Mastermind"
+                    draggable="false"
+                    loading="lazy"
+                />
             </div>
         </div>
     );

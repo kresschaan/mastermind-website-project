@@ -37,7 +37,14 @@ textarea {
     -moz-box-shadow: none;
     box-shadow: none;
 
-    resize: none; /*remove the resize handle on the bottom right*/
+    resize: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 @layer base {
@@ -141,15 +148,15 @@ textarea {
 }
 
 .home-container {
-    @apply pb-[150px] flex flex-col items-center justify-center text-white h-screen;
+    @apply flex h-screen flex-col items-center justify-center pb-[150px] text-white;
 }
 
 .home-item {
-    @apply mb-4 font-serif font-bold z-10 italic;
+    @apply z-10 mb-4 font-serif font-bold italic;
 }
 
 .about-container {
-    @apply flex flex-col text-center z-10 bg-white p-10 xl:absolute xl:max-w-2xl xl:translate-x-[40rem] xl:translate-y-[20rem];
+    @apply z-10 flex flex-col bg-white p-10 text-center xl:absolute xl:max-w-2xl xl:translate-x-[40rem] xl:translate-y-[20rem];
 }
 
 .about-item {
@@ -161,15 +168,15 @@ textarea {
 }
 
 .discover-item {
-    @apply pb-10 px-6 font-serif text-justify;
+    @apply px-6 pb-10 text-justify font-serif;
 }
 
 .plans-price-container {
-    @apply flex flex-col w-full p-5 lg:p-20 lg:flex-row;
+    @apply flex w-full flex-col p-5 lg:flex-row lg:p-20;
 }
 
 .plan-container {
-    @apply w-full h-full py-5 mb-5 lg:p-10 lg:mb-5;
+    @apply mb-5 h-full w-full py-5 lg:mb-5 lg:p-10;
 }
 
 .plan-item {
@@ -177,11 +184,11 @@ textarea {
 }
 
 .pricing-card-standard {
-    @apply flex flex-col justify-evenly bg-white border-t border-l border-b border-black border-opacity-10 mb-5 lg:mb-0 w-full h-full;
+    @apply mb-5 flex h-full w-full flex-col justify-evenly border-b border-l border-t border-black border-opacity-10 bg-white lg:mb-0;
 }
 
 .pricing-card-premium {
-    @apply bg-secondary-1 text-white border border-black border-opacity-10 rounded-lg mb-5 lg:mb-0 w-full lg:ml-2 lg:scale-110;
+    @apply mb-5 w-full rounded-lg border border-black border-opacity-10 bg-secondary-1 text-white lg:mb-0 lg:ml-2 lg:scale-110;
 }
 
 .pricing-header {
@@ -189,27 +196,27 @@ textarea {
 }
 
 .pricing-amount {
-    @apply flex my-5 pr-2 flex-row justify-center;
+    @apply my-5 flex flex-row justify-center pr-2;
 }
 
 .pricing-line {
-    @apply w-3/4 mx-auto py-2 items-center;
+    @apply mx-auto w-3/4 items-center py-2;
 }
 
 .pricing-button {
-    @apply rounded-[14px] border-2 w-10/12 h-12;
+    @apply h-12 w-10/12 rounded-[14px] border-2;
 }
 
 .footer-feature {
-    @apply flex flex-col justify-center items-center text-center;
+    @apply flex flex-col items-center justify-center text-center;
 }
 
 .footer-title {
-    @apply absolute font-serif text-2xl md:text-5xl text-white mt-10 ml-12 lg:mt-32 lg:ml-10;
+    @apply absolute ml-12 mt-10 font-serif text-2xl text-white md:text-5xl lg:ml-10 lg:mt-32;
 }
 
 .footer-nav-item {
-    @apply border-black border-l-[3px] mb-4;
+    @apply mb-4 border-l-[3px] border-black;
 }
 
 .footer-social-icon {
@@ -217,11 +224,11 @@ textarea {
 }
 
 .form-login-label {
-    @apply font-serif mb-2 lg:text-primary-5 text-sm;
+    @apply mb-2 font-serif text-sm group-focus-within:text-black lg:text-primary-5;
 }
 
 .form-login-input {
-    @apply bg-inherit p-4 border-black lg:border-slate-300;
+    @apply border-black bg-inherit p-4 group-focus-within:border-black lg:border-slate-300;
 }
 
 .form-login-input.valid {
@@ -229,35 +236,35 @@ textarea {
 }
 
 .form-login-input.error {
-    @apply border-red-400 border-b;
+    @apply border-b border-red-400;
 }
 
 .form-login-error {
-    @apply text-sm mt-2 text-gray-400;
+    @apply mt-2 text-sm text-gray-400;
 }
 
 .register-input {
-    @apply bg-inherit p-2 border-b border-black lg:border-slate-300;
+    @apply border-b border-black bg-inherit p-2 group-focus-within:border-black lg:border-slate-300;
 }
 
 .register-select {
-    @apply bg-inherit p-2 border-black lg:border-slate-300 2xl:py-4 px-2;
+    @apply border-black bg-inherit p-2 px-2 lg:border-slate-300 2xl:py-4;
 }
 
 .login-section {
-    @apply flex flex-col md:flex-row h-screen;
+    @apply flex h-screen flex-col md:flex-row;
 }
 
 .login-form {
-    @apply flex flex-col flex-1 justify-center items-center absolute lg:relative w-full h-screen;
+    @apply absolute flex h-screen w-full flex-1 flex-col items-center justify-center lg:relative;
 }
 
 .login-title {
-    @apply font-bold z-10 mb-16 text-xl tracking-wide md:text-black lg:text-3xl xl:text-4xl;
+    @apply z-10 mb-16 text-xl font-bold tracking-wide md:text-black lg:text-3xl xl:text-4xl;
 }
 
 .login-button {
-    @apply bg-secondary-1 text-white rounded-[8px] lg:border-2 h-12 mb-14;
+    @apply mb-14 h-12 rounded-[8px] bg-secondary-1 text-white lg:border-2;
 }
 
 .forgot-password {
@@ -265,24 +272,24 @@ textarea {
 }
 
 .form-label {
-    @apply font-serif mb-4 text-primary-5 text-sm;
+    @apply mb-4 font-serif text-sm text-primary-5 group-focus-within:text-black;
 }
 
 .form-error {
-    @apply text-sm mt-2 text-gray-400;
+    @apply mt-2 text-sm text-gray-400;
 }
 
 .form-button {
-    @apply bg-secondary-1 text-white rounded-[8px] border-2 h-12 mb-6;
+    @apply mb-6 h-12 rounded-[8px] border-2 bg-secondary-1 text-white;
 }
 
 .contact-title {
-    @apply font-bold z-10 mb-16 text-3xl tracking-wide md:text-black xl:text-4xl;
+    @apply z-10 mb-16 text-3xl font-bold tracking-wide md:text-black xl:text-4xl;
 }
 
 .contact-input,
 .contact-area {
-    @apply bg-inherit p-2 border-b border-black lg:border-slate-300;
+    @apply border-b border-black bg-inherit p-2 lg:border-slate-300;
 }
 
 .contact-area {
@@ -294,19 +301,19 @@ textarea {
 }
 
 #about {
-    @apply flex flex-col relative mx-auto mt-20 max-w-6xl text-primary-3 xl:translate-x-[-5rem];
+    @apply relative mx-auto mt-20 flex max-w-6xl flex-col text-primary-3 xl:translate-x-[-5rem];
 }
 
 #feature {
-    @apply flex mb-16 md:mb-32 lg:mt-40;
+    @apply mb-16 flex md:mb-32 lg:mt-40;
 }
 
 #discover {
-    @apply flex flex-col justify-evenly items-center text-center text-primary-3 md:mx-10 lg:mx-20 pb-24 lg:flex-row;
+    @apply flex flex-col items-center justify-evenly pb-24 text-center text-primary-3 md:mx-10 lg:mx-20 lg:flex-row;
 }
 
 #plans-pricing {
-    @apply flex font-avenir flex-col justify-center text-center pt-20 lg:py-20 bg-background-1;
+    @apply flex flex-col justify-center bg-background-1 pt-20 text-center font-avenir lg:py-20;
 }
 
 .loader {

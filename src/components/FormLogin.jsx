@@ -22,7 +22,7 @@ function FormLogin() {
 
     if (results.status === "rejected") {
         loginErr = (
-            <p className="text-sm mt-2 text-red-400">
+            <p className="mt-2 text-sm text-red-400">
                 Login or password is invalid.
             </p>
         );
@@ -38,12 +38,12 @@ function FormLogin() {
 
     return (
         <form
-            className="p-16 bg-white/90 rounded-lg shadow-md lg:p-0 lg:w-8/12 lg:rounded-none lg:shadow-none"
+            className="rounded-lg bg-white/90 p-16 shadow-md lg:w-8/12 lg:rounded-none lg:p-0 lg:shadow-none"
             action=""
             onSubmit={handleSubmit(handleAuthenticate)}
         >
             <h1 className="login-title font-avernir-heavy">Welcome Back!</h1>
-            <div className="flex flex-col mb-6">
+            <div className="group mb-6 flex flex-col">
                 <label className="form-login-label" htmlFor="username">
                     USERNAME
                 </label>
@@ -68,7 +68,7 @@ function FormLogin() {
                 {loginErr}
             </div>
 
-            <div className="flex flex-col mb-20">
+            <div className="group mb-20 flex flex-col">
                 <label className="form-login-label" htmlFor="password">
                     PASSWORD
                 </label>
@@ -94,16 +94,16 @@ function FormLogin() {
             </div>
 
             <div className="flex flex-col">
-                <button className="flex justify-center items-center login-button">
+                <button className="login-button flex items-center justify-center">
                     {results.isLoading ? (
-                        <ImSpinner3 className="text-2xl animate-spin"></ImSpinner3>
+                        <ImSpinner3 className="animate-spin text-2xl"></ImSpinner3>
                     ) : (
                         "Login"
                     )}
                 </button>
 
                 <div className="forgot-password">
-                    <p className="font-light pr-1">Forgot your password?</p>
+                    <p className="pr-1 font-light">Forgot your password?</p>
                     <p>Contact Customer Support</p>
                 </div>
             </div>

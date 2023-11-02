@@ -10,25 +10,27 @@ function Register() {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row h-screen">
+            <div className="flex h-screen flex-col md:flex-row">
                 <div className="flex flex-1 items-center">
-                    <div className="hidden lg:flex mb-52">
-                        <h1 className="absolute font-serif font-bold z-10 ml-10 text-5xl md:text-3xl lg:text-4xl">
+                    <div className="mb-52 hidden lg:flex">
+                        <h1 className="absolute z-10 ml-10 font-serif text-5xl font-bold md:text-3xl lg:text-4xl">
                             Sign Up
                         </h1>
-                        <h2 className="absolute mt-14 font-serif font-bold z-10 ml-10 text-5xl md:text-2xl lg:text-2xl">
+                        <h2 className="absolute z-10 ml-10 mt-14 font-serif text-5xl font-bold md:text-2xl lg:text-2xl">
                             Unlock your potential
                         </h2>
                     </div>
 
                     <img
-                        className="object-cover h-full w-full"
+                        className="h-full w-full object-cover"
                         src={registerImg}
-                        alt=""
+                        alt="Sign Up - Mastermind"
+                        draggable="false"
+                        loading="lazy"
                     />
                 </div>
 
-                <div className="flex flex-col flex-1 justify-center items-center absolute overflow-auto w-full h-screen lg:relative">
+                <div className="absolute flex h-screen w-full flex-1 flex-col items-center justify-center overflow-auto lg:relative">
                     {state ? (
                         <Form
                             priceVal={state.price}

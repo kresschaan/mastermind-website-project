@@ -8,9 +8,16 @@ function About() {
 
     return (
         <div id="about" ref={sectionRefs.about}>
-            <img className="" src={aboutImg} alt="" data-aos="fade-right" />
+            <img
+                className=""
+                src={aboutImg}
+                alt="About Image - Mastermind"
+                draggable="false"
+                loading="lazy"
+                data-aos="fade-right"
+            />
             <div className="about-container">
-                <h1 className="font-serif text-4xl pb-2">
+                <h1 className="pb-2 font-serif text-4xl">
                     What is the Mastermind?
                 </h1>
                 <h2 className="pb-5 font-serif">Meet & Learn from Experts</h2>

@@ -20,13 +20,13 @@ function Success() {
     return (
         <>
             <NavBar isLink={true}></NavBar>
-            <div className="flex flex-col justify-center items-center md:flex-row h-screen">
-                <div className="flex flex-col flex-1 justify-center items-center text-justify absolute z-10 m-20 bg-white/90 rounded-xl shadow-md lg:relative lg:m-0 lg:rounded-none lg:shadow-none">
-                    <div className="flex flex-row mt-20">
-                        <h1 className="font-avernir-heavy font-bold text-2xl tracking-wider md:text-4xl lg:text-4xl">
+            <div className="flex h-screen flex-col items-center justify-center md:flex-row">
+                <div className="absolute z-10 m-20 flex flex-1 flex-col items-center justify-center rounded-xl bg-white/90 text-justify shadow-md lg:relative lg:m-0 lg:rounded-none lg:shadow-none">
+                    <div className="mt-20 flex flex-row">
+                        <h1 className="font-avernir-heavy text-2xl font-bold tracking-wider md:text-4xl lg:text-4xl">
                             Payment Successful!
                         </h1>
-                        <FaCheckCircle className="text-3xl mx-2 mt-1 text-green-700"></FaCheckCircle>
+                        <FaCheckCircle className="mx-2 mt-1 text-3xl text-green-700"></FaCheckCircle>
                     </div>
 
                     <div className="w-full px-20 pt-14" action="">
@@ -63,7 +63,7 @@ function Success() {
                         </div>
                         <div className="flex flex-col">
                             <button
-                                className="bg-secondary-1 text-white rounded-[8px] border-2 h-12 px-16 mb-32 hover:cursor-pointer"
+                                className="mb-32 h-12 rounded-[8px] border-2 bg-secondary-1 px-16 text-white hover:cursor-pointer"
                                 onClick={() => handleConfirm()}
                             >
                                 Start learning now
@@ -72,11 +72,13 @@ function Success() {
                     </div>
                 </div>
 
-                <div className="flex flex-1 items-center h-full">
+                <div className="flex h-full flex-1 items-center">
                     <img
-                        className="object-cover relative h-full w-full"
+                        className="relative h-full w-full object-cover"
                         src={loginImg}
-                        alt=""
+                        alt="Success Image - Mastermind"
+                        draggable="false"
+                        loading="lazy"
                     />
                 </div>
             </div>

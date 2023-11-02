@@ -9,9 +9,11 @@ function Login() {
             <NavBar isLink={true}></NavBar>
             <div className="flex flex-1 items-center">
                 <img
-                    className="object-cover relative h-full w-full"
+                    className="relative h-full w-full object-cover"
                     src={loginImg}
-                    alt=""
+                    alt="Login - Mastermind"
+                    draggable="false"
+                    loading="lazy"
                 />
             </div>
 

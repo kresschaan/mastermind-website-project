@@ -19,24 +19,26 @@ function Footer() {
             </div>
 
             {/* Footer Content */}
-            <div className="flex flex-col lg:flex-row lg:mx-5 mb-6">
-                <div className="flex flex-col w-3/4 md:w-1/4">
-                    <div className="flex mx-8 mt-5 mb-2 w-3/5 h-3/4">
+            <div className="mb-6 flex flex-col lg:mx-5 lg:flex-row">
+                <div className="flex w-3/4 flex-col md:w-1/4">
+                    <div className="mx-8 mb-2 mt-5 flex h-3/4 w-3/5">
                         <div className="flex flex-row items-center">
                             <img
-                                className="h-16 w-26"
+                                className="w-26 h-16"
                                 src={footerLogo}
-                                alt=""
+                                alt="Footer Image - Mastermind"
+                                draggable="false"
+                                loading="lazy"
                             />
                             <h2 className="font-avenir-heavy text-2xl">
                                 Mastermind
                             </h2>
                         </div>
                     </div>
-                    <div className="flex mx-12 w-full h-3/4">
+                    <div className="mx-12 flex h-3/4 w-full">
                         <div className="flex flex-col">
-                            <h2 className="text-xl mt-5">Copyright © 2023</h2>
-                            <h2 className="text-sm mt-2">
+                            <h2 className="mt-5 text-xl">Copyright © 2023</h2>
+                            <h2 className="mt-2 text-sm">
                                 Mastermind the masterclass
                             </h2>
                         </div>
@@ -44,13 +46,13 @@ function Footer() {
                 </div>
 
                 {/* Navigation and Contact */}
-                <div className="flex flex-col grow">
-                    <div className="flex flex-col lg:flex-row justify-between mx-12 mt-8 mb-2">
+                <div className="flex grow flex-col">
+                    <div className="mx-12 mb-2 mt-8 flex flex-col justify-between lg:flex-row">
                         <FooterNav isLink={false}></FooterNav>
 
                         <div className="justify-center">
                             <button
-                                className="bg-secondary-1 text-white rounded-[14px] border-2 h-12 px-16"
+                                className="h-12 rounded-[14px] border-2 bg-secondary-1 px-16 text-white"
                                 onClick={handleContactUs}
                             >
                                 Contact Us
@@ -58,10 +60,10 @@ function Footer() {
                         </div>
                     </div>
 
-                    <hr className="w-full mx-auto py-2 items-center"></hr>
+                    <hr className="mx-auto w-full items-center py-2"></hr>
 
                     {/* Social Icons and Phone Number */}
-                    <div className="flex flex-row justify-between mx-8">
+                    <div className="mx-8 flex flex-row justify-between">
                         <Social></Social>
 
                         <div className="pr-2">

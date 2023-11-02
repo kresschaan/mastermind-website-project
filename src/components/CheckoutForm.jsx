@@ -62,16 +62,23 @@ const CheckoutForm = ({ clientSecret, stripePromise, paymentID }) => {
 
     return (
         <form
-            className="w-8/12 p-20 bg-white/90 rounded-lg shadow-md lg:rounded-none lg:shadow-none"
+            className="w-8/12 rounded-lg bg-white/90 p-20 shadow-md lg:rounded-none lg:shadow-none"
             onSubmit={handlePayment}
         >
             <PaymentElement />
+            <div className="mt-6 text-sm text-gray-500">
+                <p>Demo</p>
+                <p>Card Number: 4242 4242 4242 4242</p>
+                <p>Expiration: 12/25</p>
+                <p>CVC: 242</p>
+                <p>Country: Any</p>
+            </div>
             <button
-                className="flex justify-center items-center bg-secondary-1 text-white rounded-[8px] border-2 h-12 px-16 mt-10 w-full hover:cursor-pointer"
+                className="mt-10 flex h-12 w-full items-center justify-center rounded-[8px] border-2 bg-secondary-1 px-16 text-white hover:cursor-pointer"
                 disabled={!stripe}
             >
                 {isSubmitted ? (
-                    <ImSpinner3 className="text-2xl animate-spin"></ImSpinner3>
+                    <ImSpinner3 className="animate-spin text-2xl"></ImSpinner3>
                 ) : (
                     "Submit"
                 )}

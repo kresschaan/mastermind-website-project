@@ -56,16 +56,18 @@ function Checkout() {
     return (
         <div>
             {clientSecret && (
-                <div className="flex flex-col md:flex-row h-screen">
+                <div className="flex h-screen flex-col md:flex-row">
                     <div className="flex flex-1 items-center">
                         <img
-                            className="object-cover relative h-full w-full"
+                            className="relative h-full w-full object-cover"
                             src={checkoutImg}
-                            alt=""
+                            alt="Checkout - Mastermind"
+                            draggable="false"
+                            loading="lazy"
                         />
                     </div>
 
-                    <div className="flex flex-col flex-1 justify-center items-center absolute lg:relative w-full h-screen">
+                    <div className="absolute flex h-screen w-full flex-1 flex-col items-center justify-center lg:relative">
                         <Elements stripe={stripePromise} options={options}>
                             <CheckoutForm
                                 clientSecret={clientSecret}

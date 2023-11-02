@@ -10,13 +10,13 @@ function NavBar({ isLink }) {
     };
 
     return (
-        <div className="flex justify-between bg-primary-4/40 fixed z-30 top-0 w-screen">
+        <div className="fixed top-0 z-30 flex w-screen justify-between bg-primary-4/40 lg:px-8">
             <div
-                className="flex bg-white-100 hover:cursor-pointer"
+                className="bg-white-100 flex hover:cursor-pointer"
                 onClick={handleReturnHome}
             >
                 <img
-                    className="h-16 w-16 ml-2 md:h-24 md:w-24"
+                    className="ml-2 h-16 w-16 md:h-24 md:w-24"
                     src={navlogo}
                     alt=""
                 />
