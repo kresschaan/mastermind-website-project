@@ -13,7 +13,6 @@ function FormContact({ priceVal, planVal }) {
     const [addMessage, results] = useAddMessageMutation();
 
     const handleSubmitContact = (data) => {
-        console.log(data);
         addMessage(data);
     };
 
