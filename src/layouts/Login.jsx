@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import loginImg from "../assets/images/login.jpg";
+import loginImg from "../assets/images/mastermind-login.jpg";
 import FormLogin from "../components/FormLogin";
 import NavBar from "../components/NavBar";
 

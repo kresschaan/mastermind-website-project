@@ -11,14 +11,14 @@ function PlanPrice() {
 
     return (
         <div id="plans-pricing">
-            <h1 className="text-4xl pb-2">Best Pricing Plan for You</h1>
+            <h1 className="pb-2 text-4xl">Best Pricing Plan for You</h1>
             <h2 className="text-2xl font-light">
                 Pricing plans for every budget
             </h2>
 
-            <div className="plans-price-container">
-                <PlanSelect handleSelect={handleSelect}></PlanSelect>
+            <PlanSelect handleSelect={handleSelect}></PlanSelect>
 
+            <div className="plans-price-container">
                 <div className="pricing-card-standard">
                     <h3 className="pricing-header">Discover</h3>
                     <h3>Explore your potential</h3>
@@ -32,9 +32,9 @@ function PlanPrice() {
 
                     <p className="pb-2">24/7 Customer Support</p>
                     <p className="pb-2">Online Resources</p>
-                    <p className="pb-2 mb-14">Weekly Trainings</p>
+                    <p className="mb-14 pb-2">Weekly Trainings</p>
 
-                    <div className="pt-10 pb-5 justify-center">
+                    <div className="justify-center pb-5 pt-10">
                         <PlanPriceButton
                             price={20}
                             plan={plan}
@@ -58,7 +58,7 @@ function PlanPrice() {
                     <p className="pb-2">Online Resources</p>
                     <p className="pb-2">Weekly Trainings</p>
 
-                    <div className="pt-16 pb-5 justify-center">
+                    <div className="justify-center pb-5 pt-16">
                         <PlanPriceButton
                             price={50}
                             plan={plan}
@@ -84,7 +84,7 @@ function PlanPrice() {
                         <p className="pb-4">Private Individual Sessions</p>
                         <p className="pb-4">Weekly Trainings</p>
 
-                        <div className="pb-4 justify-center">
+                        <div className="justify-center pb-4">
                             <PlanPriceButton
                                 price={100}
                                 plan={plan}

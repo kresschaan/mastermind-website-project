@@ -25,12 +25,12 @@ function FormContact({ priceVal, planVal }) {
 
     return (
         <form
-            className="px-16 py-16 bg-white/90 rounded-lg shadow-md w-9/12 md:mt-0 lg:p-0 md:w-8/12 lg:rounded-none lg:shadow-none overflow-auto no-scrollbar"
+            className="no-scrollbar w-9/12 overflow-auto rounded-lg bg-white/90 px-16 py-16 shadow-md md:mt-14 md:w-8/12 lg:rounded-none lg:p-0 lg:shadow-none"
             action=""
             onSubmit={handleSubmit(handleSubmitContact)}
         >
             <h1 className="contact-title font-avernir-heavy">Contact Us</h1>
-            <div className="flex flex-col my-6 2xl:mb-4">
+            <div className="group my-6 flex flex-col 2xl:mb-4">
                 <label className="form-label" htmlFor="firstName">
                     NAME
                 </label>
@@ -52,7 +52,7 @@ function FormContact({ priceVal, planVal }) {
                 )}
             </div>
 
-            <div className="flex flex-col my-6 2xl:mb-4">
+            <div className="group my-6 flex flex-col 2xl:mb-4">
                 <label className="form-label" htmlFor="email">
                     EMAIL
                 </label>
@@ -73,7 +73,7 @@ function FormContact({ priceVal, planVal }) {
                 )}
             </div>
 
-            <div className="flex flex-col my-6 2xl:mb-4">
+            <div className="group my-6 flex flex-col 2xl:mb-4">
                 <label className="form-label" htmlFor="email">
                     MESSAGE
                 </label>
@@ -93,13 +93,13 @@ function FormContact({ priceVal, planVal }) {
                 )}
             </div>
 
-            <div className="flex flex-col mt-14">
+            <div className="mt-14 flex flex-col">
                 <button
                     type="submit"
-                    className="flex justify-center items-center form-button hover:cursor-pointer"
+                    className="form-button flex items-center justify-center hover:cursor-pointer"
                 >
                     {results.isLoading ? (
-                        <ImSpinner3 className="text-2xl animate-spin"></ImSpinner3>
+                        <ImSpinner3 className="animate-spin text-2xl"></ImSpinner3>
                     ) : (
                         "Submit"
                     )}

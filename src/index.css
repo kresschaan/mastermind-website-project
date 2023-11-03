@@ -172,11 +172,11 @@ button:focus {
 }
 
 .plans-price-container {
-    @apply flex w-full flex-col p-5 lg:flex-row lg:p-20;
+    @apply flex w-full flex-col p-5 lg:flex-row lg:px-20;
 }
 
 .plan-container {
-    @apply mb-5 h-full w-full py-5 lg:mb-5 lg:p-10;
+    @apply mb-5 mt-14 h-full w-full lg:px-20;
 }
 
 .plan-item {
@@ -289,11 +289,11 @@ button:focus {
 
 .contact-input,
 .contact-area {
-    @apply border-b border-black bg-inherit p-2 lg:border-slate-300;
+    @apply border-b border-black bg-inherit p-2 group-focus-within:border-black lg:border-slate-300;
 }
 
 .contact-area {
-    @apply h-64;
+    @apply h-[100px];
 }
 
 #home {

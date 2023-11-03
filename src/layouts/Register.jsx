@@ -1,6 +1,4 @@
 import registerImg from "../assets/images/register.jpg";
-import navlogo from "../assets/images/mastermind-logo.png";
-import NavBar from "../components/NavBar";
 import Form from "../components/Form";
 import Modal from "../components/Modal";
 import { useLocation } from "react-router-dom";

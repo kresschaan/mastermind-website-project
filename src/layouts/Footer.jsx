@@ -1,5 +1,5 @@
 import quoteImg from "../assets/images/mastermind-quote-section.jpg";
-import footerLogo from "../assets/images/mastermind-logo.png";
+import footerLogo from "../assets/images/mastermind-logo.svg";
 import FooterNav from "../components/FooterNav";
 import Social from "../components/Social";
 import { useNavigate } from "react-router-dom";

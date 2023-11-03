@@ -38,7 +38,7 @@ function FormLogin() {
 
     return (
         <form
-            className="rounded-lg bg-white/90 p-16 shadow-md lg:w-8/12 lg:rounded-none lg:p-0 lg:shadow-none"
+            className="mt-12 overflow-auto rounded-lg bg-white/90 p-16 shadow-md lg:w-8/12 lg:rounded-none lg:p-0 lg:shadow-none"
             action=""
             onSubmit={handleSubmit(handleAuthenticate)}
         >
@@ -68,7 +68,7 @@ function FormLogin() {
                 {loginErr}
             </div>
 
-            <div className="group mb-20 flex flex-col">
+            <div className="group mb-6 flex flex-col">
                 <label className="form-login-label" htmlFor="password">
                     PASSWORD
                 </label>
@@ -91,6 +91,12 @@ function FormLogin() {
                     </p>
                 )}
                 {loginErr}
+            </div>
+
+            <div className="mb-6 text-sm text-gray-500">
+                <p>Demo</p>
+                <p>Username: christianallancho@gmail.com</p>
+                <p>Password: test123!</p>
             </div>
 
             <div className="flex flex-col">

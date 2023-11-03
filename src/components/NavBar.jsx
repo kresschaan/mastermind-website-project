@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import navlogo from "../assets/images/letter-m.png";
+import navlogo from "../assets/images/mastermind-nav.png";
 import NavBarItems from "./NavBarItems";
 
 function NavBar({ isLink }) {

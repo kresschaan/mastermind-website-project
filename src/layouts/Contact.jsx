@@ -1,5 +1,4 @@
 import contactUs from "../assets/images/contactus.jpg";
-import navlogo from "../assets/images/mastermind-logo.png";
 import NavBar from "../components/NavBar";
 import FormContact from "../components/FormContact";
 import Modal from "../components/Modal";
@@ -11,16 +10,18 @@ function Contact() {
     return (
         <>
             <NavBar isLink={true}></NavBar>
-            <div className="flex flex-col md:flex-row h-screen">
+            <div className="flex h-screen flex-col md:flex-row">
                 <div className="flex flex-1 items-center">
                     <img
-                        className="object-cover h-full w-full"
+                        className="h-full w-full object-cover"
                         src={contactUs}
-                        alt=""
+                        alt="Contact - Mastermind"
+                        draggable="false"
+                        loading="lazy"
                     />
                 </div>
 
-                <div className="flex flex-col flex-1 justify-center items-center absolute overflow-auto w-full h-screen lg:relative">
+                <div className="absolute flex h-screen w-full flex-1 flex-col items-center justify-center overflow-auto lg:relative">
                     <FormContact></FormContact>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import logo from "../assets/images/mastermind-logo.png";
+import logo from "../assets/images/mastermind-logo.svg";
 import { useEffect, useState } from "react";
 import { FaAngleDown, FaBell } from "react-icons/fa";
 import { FcGraduationCap, FcDiploma1, FcPlanner, FcVip } from "react-icons/fc";
@@ -42,14 +42,14 @@ function Dashboard() {
                 <div className="flex flex-row justify-between lg:pr-8">
                     <div className="flex flex-row">
                         <img className="h-16 w-20" src={logo} alt="" />
-                        <h2 className="mt-4 font-avenir-heavy text-2xl pr-10">
+                        <h2 className="mt-4 pr-10 font-avenir-heavy text-2xl">
                             Mastermind
                         </h2>
                     </div>
 
                     <div
                         id="menu-btn"
-                        className={`h-12 w-12 mt-2 hover:cursor-pointer lg:hidden ${
+                        className={`mt-2 h-12 w-12 hover:cursor-pointer lg:hidden ${
                             isMenuOpen ? "open" : ""
                         }`}
                         onClick={() => navToggle()}
@@ -61,51 +61,51 @@ function Dashboard() {
                 </div>
 
                 {isMenuOpen && (
-                    <div className="mt-14 lg:mt-28 px-2 ml-2 w-full">
-                        <div className="flex flex-row justify-between border-b mb-8">
-                            <h3 className="font-serif mb-2 text-primary-5 text-sm">
+                    <div className="ml-2 mt-14 w-full px-2 lg:mt-28">
+                        <div className="mb-8 flex flex-row justify-between border-b">
+                            <h3 className="mb-2 font-serif text-sm text-primary-5">
                                 DASHBOARD
                             </h3>
-                            <FaAngleDown className="text-2xl mx-2 text-primary-5"></FaAngleDown>
+                            <FaAngleDown className="mx-2 text-2xl text-primary-5"></FaAngleDown>
                         </div>
-                        <div className="flex flex-row justify-between border-b mb-8">
-                            <h3 className="font-serif mb-2 text-primary-5 text-sm">
+                        <div className="mb-8 flex flex-row justify-between border-b">
+                            <h3 className="mb-2 font-serif text-sm text-primary-5">
                                 SCHEDULE
                             </h3>
-                            <FaAngleDown className="text-2xl mx-2 text-primary-5"></FaAngleDown>
+                            <FaAngleDown className="mx-2 text-2xl text-primary-5"></FaAngleDown>
                         </div>
-                        <div className="flex flex-row justify-between border-b mb-8">
-                            <h3 className="font-serif mb-2 text-primary-5 text-sm">
+                        <div className="mb-8 flex flex-row justify-between border-b">
+                            <h3 className="mb-2 font-serif text-sm text-primary-5">
                                 TRAININGS
                             </h3>
-                            <FaAngleDown className="text-2xl mx-2 text-primary-5"></FaAngleDown>
+                            <FaAngleDown className="mx-2 text-2xl text-primary-5"></FaAngleDown>
                         </div>
-                        <div className="flex flex-row justify-between border-b mb-8">
-                            <h3 className="font-serif mb-2 text-primary-5 text-sm">
+                        <div className="mb-8 flex flex-row justify-between border-b">
+                            <h3 className="mb-2 font-serif text-sm text-primary-5">
                                 ACCOUNT
                             </h3>
-                            <FaAngleDown className="text-2xl mx-2 text-primary-5"></FaAngleDown>
+                            <FaAngleDown className="mx-2 text-2xl text-primary-5"></FaAngleDown>
                         </div>
                     </div>
                 )}
             </div>
 
-            <div className="flex flex-col w-screen border-l">
-                <div className="flex flex-row justify-between py-10 px-2 border-b">
+            <div className="flex w-screen flex-col border-l">
+                <div className="flex flex-row justify-between border-b px-2 py-10">
                     <div className="hidden sm:flex">
-                        <h3 className="font-serif mt-1 pl-8 text-primary-5 text-xl lg:text-3xl">
+                        <h3 className="mt-1 pl-8 font-serif text-xl text-primary-5 lg:text-3xl">
                             DASHBOARD
                         </h3>
                     </div>
 
-                    <div className="flex flex-row justify-center items-center pl-8">
+                    <div className="flex flex-row items-center justify-center pl-8">
                         <img src="" alt="" />
                         <div className="flex flex-col">
                             <p>Welcome Christian</p>
                             <p>August 31, 2023 11:53 PM</p>
                         </div>
 
-                        <div className="p-2 px-4 ml-5 border-l hover:cursor-pointer">
+                        <div className="ml-5 border-l p-2 px-4 hover:cursor-pointer">
                             <FaBell className="text-3xl"></FaBell>
                         </div>
 
@@ -113,64 +113,64 @@ function Dashboard() {
                     </div>
                 </div>
 
-                <div className="flex flex-col m-10 border-b">
+                <div className="m-10 flex flex-col border-b">
                     <div className="flex flex-col">
-                        <h4 className="font-serif mb-2 text-primary-5 text-sm">
+                        <h4 className="mb-2 font-serif text-sm text-primary-5">
                             SUBSCRIBED UNTIL
                         </h4>
                         <h3>December 23, 2023</h3>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row justify-evenly mt-10 mb-6">
-                        <div className="justify-center h-72 mb-10 lg:mb-0">
+                    <div className="mb-6 mt-10 flex flex-col justify-evenly lg:flex-row">
+                        <div className="mb-10 h-72 justify-center lg:mb-0">
                             <BarChart className=""></BarChart>
                         </div>
-                        <div className="justify-center h-72 mb-10 lg:mb-0">
+                        <div className="mb-10 h-72 justify-center lg:mb-0">
                             <LineChart></LineChart>
                         </div>
-                        <div className="justify-center h-72 mb-10 lg:mb-0">
+                        <div className="mb-10 h-72 justify-center lg:mb-0">
                             <PieChart></PieChart>
                         </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col text-center lg:flex-row justify-between mx-10">
-                    <div className="flex flex-row justify-center items-center w-full lg:w-6/12 p-4 py-10 m-2 shadow-lg rounded-xl mb-4 hover:cursor-pointer">
-                        <div className="flex flex-col rounded-full p-4 bg-slate-300 h-">
-                            <FcGraduationCap className="text-4xl text-slate"></FcGraduationCap>
+                <div className="mx-10 flex flex-col justify-between text-center lg:flex-row">
+                    <div className="m-2 mb-4 flex w-full flex-row items-center justify-center rounded-xl p-4 py-10 shadow-lg hover:cursor-pointer lg:w-6/12">
+                        <div className="h- flex flex-col rounded-full bg-slate-300 p-4">
+                            <FcGraduationCap className="text-slate text-4xl"></FcGraduationCap>
                         </div>
 
-                        <div className="flex flex-col ml-4">
+                        <div className="ml-4 flex flex-col">
                             <h3 className="mb-4">Classes Enrolled</h3>
                             <p className="text-center text-4xl">12</p>
                         </div>
                     </div>
-                    <div className="flex flex-row justify-center items-center w-full lg:w-6/12 p-4 py-10 m-2 shadow-lg rounded-xl mb-4 hover:cursor-pointer">
-                        <div className="flex flex-col rounded-full p-4 bg-slate-300">
-                            <FcVip className="text-4xl text-slate"></FcVip>
+                    <div className="m-2 mb-4 flex w-full flex-row items-center justify-center rounded-xl p-4 py-10 shadow-lg hover:cursor-pointer lg:w-6/12">
+                        <div className="flex flex-col rounded-full bg-slate-300 p-4">
+                            <FcVip className="text-slate text-4xl"></FcVip>
                         </div>
 
-                        <div className="flex flex-col ml-4">
+                        <div className="ml-4 flex flex-col">
                             <h3 className="mb-4">Private Session</h3>
                             <p className="text-center text-4xl">12</p>
                         </div>
                     </div>
-                    <div className="flex flex-row justify-center items-center w-full lg:w-6/12 p-4 py-10 m-2 shadow-lg rounded-xl mb-4 hover:cursor-pointer">
-                        <div className="flex flex-col rounded-full p-4 bg-slate-300 h-">
-                            <FcDiploma1 className="text-4xl text-slate"></FcDiploma1>
+                    <div className="m-2 mb-4 flex w-full flex-row items-center justify-center rounded-xl p-4 py-10 shadow-lg hover:cursor-pointer lg:w-6/12">
+                        <div className="h- flex flex-col rounded-full bg-slate-300 p-4">
+                            <FcDiploma1 className="text-slate text-4xl"></FcDiploma1>
                         </div>
 
-                        <div className="flex flex-col ml-4">
+                        <div className="ml-4 flex flex-col">
                             <h3 className="mb-4">Certificates Earned</h3>
                             <p className="text-center text-4xl">12</p>
                         </div>
                     </div>
-                    <div className="flex flex-row justify-center items-center w-full lg:w-6/12 p-4 py-10 m-2 shadow-lg rounded-xl mb-4 hover:cursor-pointer">
-                        <div className="flex flex-col rounded-full p-4 bg-slate-300 h-">
-                            <FcPlanner className="text-4xl text-slate"></FcPlanner>
+                    <div className="m-2 mb-4 flex w-full flex-row items-center justify-center rounded-xl p-4 py-10 shadow-lg hover:cursor-pointer lg:w-6/12">
+                        <div className="h- flex flex-col rounded-full bg-slate-300 p-4">
+                            <FcPlanner className="text-slate text-4xl"></FcPlanner>
                         </div>
 
-                        <div className="flex flex-col ml-4">
+                        <div className="ml-4 flex flex-col">
                             <h3 className="mb-4">Classes Today</h3>
                             <p className="text-center text-4xl">12</p>
                         </div>
@@ -190,14 +190,14 @@ function Dashboard() {
                     </div> */}
                 </div>
 
-                <div className="flex flex-col lg:flex-row justify-evenly m-10">
-                    <div className="flex flex-col w-full lg:w-2/4 mr-10">
+                <div className="m-10 flex flex-col justify-evenly lg:flex-row">
+                    <div className="mr-10 flex w-full flex-col lg:w-2/4">
                         <h4 className="mb-4">Upcoming Schedules</h4>
 
                         <div className="max-h-[500px] overflow-auto">
-                            <div className="border mb-2 p-4">
+                            <div className="mb-2 border p-4">
                                 <div className="flex flex-row">
-                                    <div className="rounded-full bg-slate-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="mr-2 mt-1 h-4 w-4 rounded-full bg-slate-500"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
 
@@ -205,45 +205,45 @@ function Dashboard() {
                                     Entrepreneurship and Business Coaching
                                 </p>
                             </div>
-                            <div className="border mb-2 p-4">
+                            <div className="mb-2 border p-4">
                                 <div className="flex flex-row">
-                                    <div className="rounded-full bg-slate-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="mr-2 mt-1 h-4 w-4 rounded-full bg-slate-500"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
                                     Entrepreneurship and Business Coaching
                                 </p>
                             </div>
-                            <div className="border mb-2 p-4">
+                            <div className="mb-2 border p-4">
                                 <div className="flex flex-row">
-                                    <div className="rounded-full bg-orange-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="mr-2 mt-1 h-4 w-4 rounded-full bg-orange-500"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
                                     Entrepreneurship and Business Coaching
                                 </p>
                             </div>
-                            <div className="border mb-2 p-4">
+                            <div className="mb-2 border p-4">
                                 <div className="flex flex-row">
-                                    <div className="rounded-full bg-sky-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="mr-2 mt-1 h-4 w-4 rounded-full bg-sky-500"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
                                     Entrepreneurship and Business Coaching
                                 </p>
                             </div>
-                            <div className="border mb-2 p-4">
+                            <div className="mb-2 border p-4">
                                 <div className="flex flex-row">
-                                    <div className="rounded-full bg-emerald-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="mr-2 mt-1 h-4 w-4 rounded-full bg-emerald-500"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
                                     Entrepreneurship and Business Coaching
                                 </p>
                             </div>
-                            <div className="border mb-2 p-4">
+                            <div className="mb-2 border p-4">
                                 <div className="flex flex-row">
-                                    <div className="rounded-full bg-emerald-500 mt-1 mr-2 h-4 w-4"></div>
+                                    <div className="mr-2 mt-1 h-4 w-4 rounded-full bg-emerald-500"></div>
                                     <p className="mb-2">10:30 PM</p>
                                 </div>
                                 <p className="pl-6">
@@ -252,10 +252,10 @@ function Dashboard() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col w-full lg:w-2/4 mt-10 lg:mt-0 max-h-[530px] mx-0 lg:mx-2 ">
+                    <div className="mx-0 mt-10 flex max-h-[530px] w-full flex-col lg:mx-2 lg:mt-0 lg:w-2/4 ">
                         <h4 className="mb-4">Learning Summary</h4>
 
-                        <div className="border rounded-lg p-4 overflow-auto">
+                        <div className="overflow-auto rounded-lg border p-4">
                             <h5>Entrepreneurship and Business Coaching</h5>
                             <ul className="list-disc p-4">
                                 <li className="mb-6">
