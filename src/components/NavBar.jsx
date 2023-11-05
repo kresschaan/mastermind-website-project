@@ -10,7 +10,7 @@ function NavBar({ isLink }) {
     };
 
     return (
-        <div className="fixed top-0 z-30 flex w-screen justify-between bg-primary-4/40 lg:px-8">
+        <div className="fixed top-0 z-30 flex w-screen justify-between bg-primary-4/40 backdrop-blur-lg lg:px-8">
             <div
                 className="bg-white-100 flex hover:cursor-pointer"
                 onClick={handleReturnHome}

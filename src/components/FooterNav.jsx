@@ -15,9 +15,9 @@ function FooterNav({ isLink }) {
     return (
         <div className="flex flex-col lg:flex-row">
             <div className="flex flex-col">
-                <div className="footer-nav-item">
+                <div className="footer-nav-item ">
                     <div
-                        className="ml-2 hover:cursor-pointer"
+                        className="ml-2 hover:cursor-pointer hover:text-primary-4"
                         onClick={() => checkNav("home")}
                     >
                         Home
@@ -25,7 +25,7 @@ function FooterNav({ isLink }) {
                 </div>
                 <div className="footer-nav-item">
                     <div
-                        className="ml-2 hover:cursor-pointer"
+                        className="ml-2 hover:cursor-pointer hover:text-primary-4"
                         onClick={() => checkNav("plans-pricing")}
                     >
                         Plan & Pricing
@@ -36,7 +36,7 @@ function FooterNav({ isLink }) {
             <div className="flex flex-col lg:mx-24 xl:mx-36">
                 <div className="footer-nav-item">
                     <div
-                        className="ml-2 hover:cursor-pointer"
+                        className="ml-2 hover:cursor-pointer hover:text-primary-4"
                         onClick={() => checkNav("about")}
                     >
                         About
@@ -44,7 +44,7 @@ function FooterNav({ isLink }) {
                 </div>
                 <div className="footer-nav-item">
                     <div
-                        className="ml-2 hover:cursor-pointer"
+                        className="ml-2 hover:cursor-pointer hover:text-primary-4"
                         onClick={() => checkNav("register")}
                     >
                         Sign Up
@@ -55,7 +55,7 @@ function FooterNav({ isLink }) {
             <div className="flex flex-col">
                 <div className="footer-nav-item">
                     <div
-                        className="ml-2 hover:cursor-pointer"
+                        className="ml-2 hover:cursor-pointer hover:text-primary-4"
                         onClick={() => checkNav("login")}
                     >
                         Log In

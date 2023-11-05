@@ -2,6 +2,7 @@ import registerImg from "../assets/images/register.jpg";
 import Form from "../components/Form";
 import Modal from "../components/Modal";
 import { useLocation } from "react-router-dom";
+import NavBar from "../components/NavBar";
 
 function Register() {
     const { state } = useLocation();
@@ -9,6 +10,7 @@ function Register() {
     return (
         <>
             <div className="flex h-screen flex-col md:flex-row">
+                <NavBar isLink={true}></NavBar>
                 <div className="flex flex-1 items-center">
                     <div className="mb-52 hidden lg:flex">
                         <h1 className="absolute z-10 ml-10 font-serif text-5xl font-bold md:text-3xl lg:text-4xl">
@@ -28,7 +30,7 @@ function Register() {
                     />
                 </div>
 
-                <div className="absolute flex h-screen w-full flex-1 flex-col items-center justify-center overflow-auto lg:relative">
+                <div className="absolute flex h-screen w-full flex-1 flex-col items-center justify-center overflow-auto lg:relative lg:mt-10 xl:mt-0">
                     {state ? (
                         <Form
                             priceVal={state.price}

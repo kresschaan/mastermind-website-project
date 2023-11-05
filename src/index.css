@@ -216,7 +216,7 @@ button:focus {
 }
 
 .footer-nav-item {
-    @apply mb-4 border-l-[3px] border-black;
+    @apply mb-4 border-l-[3px] border-black hover:border-primary-4;
 }
 
 .footer-social-icon {

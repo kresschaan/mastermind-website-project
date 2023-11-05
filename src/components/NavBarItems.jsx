@@ -40,7 +40,7 @@ function NavBarItems({ isLink }) {
 
             <div
                 id="menu-btn"
-                className={`h-12 w-12 mr-4 mt-2 text-white hover:cursor-pointer md:hidden ${
+                className={`mr-4 mt-2 h-12 w-12 text-white hover:cursor-pointer md:hidden ${
                     isMenuOpen ? "open" : ""
                 }`}
                 onClick={() => navToggle()}
@@ -50,33 +50,33 @@ function NavBarItems({ isLink }) {
                 <span className="hamburger-bottom mb-4"></span>
             </div>
 
-            <div className="hidden md:flex p-10 justify-evenly text-white text-sm">
+            <div className="hidden justify-evenly p-10 text-sm text-white md:flex">
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("home")}
                 >
                     Home
                 </div>
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("about")}
                 >
                     About
                 </div>
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("plans-pricing")}
                 >
                     Plans & Pricing
                 </div>
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("register")}
                 >
                     Sign Up
                 </div>
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("login")}
                 >
                     Log In
@@ -84,13 +84,13 @@ function NavBarItems({ isLink }) {
             </div>
         </div>
     ) : (
-        <div className="absolute top-0 bottom-0 left-0 flex flex-col self-end w-full min-h-fit text-lg text-white uppercase bg-black">
-            <div className="flex flex-row justify-end py-2 px-4 md:hidden">
+        <div className="absolute bottom-0 left-0 top-0 flex min-h-fit w-full flex-col self-end bg-black text-lg uppercase text-white">
+            <div className="flex flex-row justify-end px-4 py-2 md:hidden">
                 {/* <MdMenu className="h-12 w-12 text-white"></MdMenu> */}
 
                 <div
                     id="menu-btn"
-                    className={`h-12 w-12 mr-4 mt-2 text-white hover:cursor-pointer md:hidden ${
+                    className={`mr-4 mt-2 h-12 w-12 text-white hover:cursor-pointer md:hidden ${
                         isMenuOpen ? "open" : ""
                     }`}
                     onClick={() => navToggle()}
@@ -101,33 +101,33 @@ function NavBarItems({ isLink }) {
                 </div>
             </div>
 
-            <div className="py-24 pl-12 space-y-3">
+            <div className="space-y-3 py-24 pl-12">
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("home")}
                 >
                     Home
                 </div>
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("about")}
                 >
                     About
                 </div>
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("plans-pricing")}
                 >
                     Plans & Pricing
                 </div>
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("register")}
                 >
                     Sign Up
                 </div>
                 <div
-                    className="font-serif font-semibold pr-5 cursor-pointer"
+                    className="cursor-pointer pr-5 font-serif font-semibold hover:text-primary-5"
                     onClick={() => checkNav("login")}
                 >
                     Log In
