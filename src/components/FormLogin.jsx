@@ -95,7 +95,7 @@ function FormLogin() {
 
             <div className="mb-6 text-sm text-gray-500">
                 <p>Demo</p>
-                <p>Username: christianallancho@gmail.com</p>
+                <p>Username: christiancho</p>
                 <p>Password: test123!</p>
             </div>
 
